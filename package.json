@@ -1,0 +1,33 @@
+{
+  "name": "londonrefereesgroup_fip",
+  "version": "1.0.0",
+  "description": "London Referees Group",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdronfield/londonrefereesgroup_fip.git"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "node",
+    "npm"
+  ],
+  "author": "Taylor Dronfield",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tdronfield/londonrefereesgroup_fip/issues"
+  },
+  "homepage": "https://github.com/tdronfield/londonrefereesgroup_fip#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "mysql": "^2.18.1",
+    "underscore": "^1.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
