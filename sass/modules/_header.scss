@@ -1,0 +1,66 @@
+#top-nav {
+    width: 100vw;
+    display: absolute;
+    height:8vh;
+}
+
+/* tablet */ 
+
+@media screen and (min-width: $breakpoint-tablet) {
+    #top-nav {
+        width: 100vw;
+        display: absolute;
+        height:8vh;
+    }
+  }
+
+/* desktop  */
+  
+  @media screen and (min-width: $breakpoint-desktop) {
+    header {
+        position:sticky;
+        top:0;
+        left:0;
+        display:block;
+        width:100vw;
+        height:16vh;
+        z-index:999;
+    }
+    #top-nav {
+        width:96%;
+        height:100%;
+        padding-left:2%;
+        padding-right:2%;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+        justify-items:center;
+
+        a { 
+            width:13%;
+            font-size:$main-accent-size;
+            text-align:center;
+            cursor: pointer;
+            color:$offwhite;
+            transition: $transition;
+            font-weight:600;
+        }
+
+        a:hover { 
+            color:$accent-color;
+        }
+
+        .nav-logo { 
+            width:20%;
+            height:100%;
+            text-align:center;
+
+            img { 
+                height:100%;
+            }
+        }
+
+    }
+  }
+

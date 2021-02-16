@@ -1,0 +1,52 @@
+
+#app {
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+}
+
+#contents {
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:10;
+}
+/*landing styles*/ 
+#landing {
+
+    background-image: url('../images/bigref.jpg');
+    background-repeat:none;
+    background-size:cover;
+    width:100%;
+    height:100%;
+
+    .landing_text {
+        display:flex;
+        flex-direction:column;
+        width:30%;
+        margin:auto;
+        padding:30vh;
+        padding-top:40vh;
+        margin-left:0;
+        text-align:center;
+
+        h1 {
+            color:$accent-color;
+            font-size:3vw;
+            font-weight:600;
+        }
+        h3 {
+            color:$offwhite;
+            margin-top:4vh;
+            margin-bottom:4vh;
+            font-size: 1.5vw;
+        }
+        p { 
+            color:$offwhite;
+        }
+    }
+}

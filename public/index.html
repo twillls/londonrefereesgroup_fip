@@ -10,9 +10,11 @@
     <title>London Referrees Group</title>
 </head>
 <body>
+
     <!--NAVIGATION TOP BAR-->
+
     <header>
-        <div class="top-nav">
+        <div id="top-nav">
             <a class="nav-link">
                 SERVICES
             </a>
@@ -22,7 +24,9 @@
             <a class="nav-link">
                 JR. PROGRAM
             </a>
-            <img class="nav-logo" src="images/logo.png">
+            <div class="nav-logo">
+                <img src="images/logo.png">
+            </div>
             <a class="nav-link">
                 OUR PARTNERS
             </a>
@@ -34,16 +38,35 @@
             </a>
         </div>
     </header>
+    
     <!--MAIN PAGE-->
+
     <main id="app">
+
         <!--PAGE CONTENTS (DYNAMIC VUE COMPONENT)-->
-        <section class="contents">
+
+        <section id="contents">
             <!--vue component here-->
+
+            <!-- this is the static version of the landing page for testing purposes-->
+            <section id="landing">
+                <div class="landing_text">
+                    <h1 class="tagline">TAGLINE HERE.</h1>
+                    <h3 class="subhead">Heading here.</h3>
+                    <p class="intro">We are an organization of 225 hockey referees serving London and area. 
+                        If you are currently looking for an organization to referee your hockey league,
+                        our team would like the opportunity to assist.</p>
+                    <button class="find">FIND A REF</button>
+                </div>
+
+            </section>
         </section>
     </main>
+
     <footer id="main-footer">
         <!--footer here-->
     </footer>
+
     <script type="module" src="js/main.js"></script>
 </body>
 </html>
