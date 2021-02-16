@@ -1,16 +1,16 @@
-const http = require('http');
-// like a PHP require
-// require is more or less the same as a JS import 
+const express = require('express');
+const path = require('path');
 
-const hostname = '127.0.0.1'; // localhost
-const port = process.env.PORT || 3000; // localhost:3000
+const app = express();
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
+app.use(express.static("public"));
+
+const port = process.env.PORT || 5000;
+
+app.get("/", (req, res) => {
+	res.sendFile(path.join(__dirname, "index.html"));
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+const server = app.listen(port, () => {
+	console.log(`app is running on ${port}`);
 });
