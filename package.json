@@ -4,7 +4,10 @@
   "description": "London Referees Group",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-ui": "browser-sync start --proxy 'localhost:5000' --files 'index.html'",
+    "start-dev": "nodemon app",
+    "start": "node app"
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,8 @@
   },
   "homepage": "https://github.com/tdronfield/londonrefereesgroup_fip#readme",
   "dependencies": {
+    "browsersync": "0.0.1-security",
+    "express": "^4.17.1",
     "gulp": "^4.0.2",
     "mysql": "^2.18.1",
     "underscore": "^1.12.0"

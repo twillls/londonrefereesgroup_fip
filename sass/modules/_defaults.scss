@@ -1,0 +1,48 @@
+body { 
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    max-height:100vh;
+    max-width:100vw;
+    height:100vh;
+    width:100vw;
+    background-color:$offwhite;
+    color:$main-text-color;
+    font-family: $main-font;
+    font-size: $main-font-size;
+}
+
+/* responsive body defaults */ 
+
+@media (min-width: 480px) and #{$retina} {
+    body {
+      background-color: red;
+    }
+  }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $main-font;
+    text-decoration:none;
+    font-weight:500;
+    color: $main-text-color;
+    font-size: $main-font-size;
+}
+
+a {
+    color: $main-text-color;
+    text-decoration: none;
+}
+
+b {
+    font-weight: 600;
+}
+
+i { 
+    color: $accent-color; 
+}
+
+button { 
+    border: 0;
+    border-radius: 1vw;
+}
