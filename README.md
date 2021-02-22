@@ -18,9 +18,13 @@ Currently Under Construction
 
 ## Credits
 Carter Geerts [@cgeerts]
+
 Haley Billson [@hbillson]
+
 Marisa Settimi [@msettimi13]
+
 Meg Morris [@radnrattled]
+
 Taylor Dronfield [@tdronfield]
 
 ## License
