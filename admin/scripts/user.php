@@ -131,5 +131,5 @@ function isUsernameExists($username)
         )
     );
 
-    return !$create_user_result || $user_exists_set->fetchColumn()>0;
+    return !$user_exists_result || $user_exists_set->fetchColumn()>0;
 }
