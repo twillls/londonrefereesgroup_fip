@@ -39,6 +39,7 @@ i {
     color: $accent-color; 
 }
 button { 
+    font-size:1em;
     border: none;
     border-radius: 6px;
     text-decoration:none;
@@ -56,6 +57,11 @@ button:hover {
     background-color:$offwhite;
     color:$accent-color;
 }
+
+@font-face {
+    font-family: "SportsNight";
+    src: url(../fonts/SF_Sports_Night.ttf);
+  }
 
 /* tablet defaults */ 
 

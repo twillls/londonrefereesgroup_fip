@@ -36,9 +36,11 @@
         align-items:center;
         justify-content:space-between;
         justify-items:center;
+        background-color:$accent-color;
 
         a { 
             width:13%;
+            font-family:"SportsNight";
             font-size:$main-accent-size;
             text-align:center;
             cursor: pointer;
@@ -48,7 +50,7 @@
         }
 
         a:hover { 
-            color:$accent-color;
+            color:#111;
         }
 
         .nav-logo { 
