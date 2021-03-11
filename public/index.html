@@ -5,67 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/solid.css"type="text/css">
+    <link rel="stylesheet" href="css/brands.css"type="text/css">
+    <link rel="stylesheet" href="css/regular.css"type="text/css">
+    <link rel="stylesheet" href="css/fontawesome.css"type="text/css">
+    <link rel="stylesheet" href="css/font-awesome-animation.css"type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>London Referrees Group</title>
 </head>
 <body>
 
     <!--NAVIGATION TOP BAR-->
-
-    <header>
-        <div id="top-nav">
-            <a class="nav-link">
-                SERVICES
-            </a>
-            <a class="nav-link">
-                MEMBERSHIP
-            </a>
-            <a class="nav-link">
-                JR. PROGRAM
-            </a>
-            <div class="nav-logo">
-                <img src="images/LRGlogoalt.svg">
-            </div>
-            <a class="nav-link">
-                OUR PARTNERS
-            </a>
-            <a class="nav-link">
-                EDUCATION
-            </a>
-            <a class="nav-link book">
-                BOOK AN OFFICIAL
-            </a>
-        </div>
-    </header>
-    
     <!--MAIN PAGE-->
 
     <main id="app">
+        <section key="nav" id="main-nav">
+            <div class="menu-button">
+                <i @click="toggleNav" class="fas fa-bars"></i>
+            </div>
+            <navbar @setview="updateView"></navbar>
+        </section>
 
         <!--PAGE CONTENTS (DYNAMIC VUE COMPONENT)-->
 
         <section id="contents">
             <!--vue component here-->
-
+                <component :is="setView" @setview="updateView"></component>
             <!-- this is the static version of the landing page for testing purposes-->
-            <section id="landing">
-                <div class="landing_text">
-                    <h1 class="tagline">TAGLINE HERE.</h1>
-                    <h3 class="subhead">Heading here.</h3>
-                    <p class="intro">We are an organization of 225 hockey referees serving London and area. 
-                        If you are currently looking for an organization to referee your hockey league,
-                        our team would like the opportunity to assist.</p>
-                    <button class="find">MEMBER LOGIN</button>
-                </div>
-
-            </section>
+           
         </section>
+        
+        <foot key="footer" @setview="updateView"></foot>
     </main>
 
-    <footer id="main-footer">
-        <!--footer here-->
-    </footer>
 
     <script type="module" src="js/main.js"></script>
 </body>

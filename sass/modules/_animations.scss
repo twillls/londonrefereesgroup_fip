@@ -1,0 +1,29 @@
+@keyframes slide {
+    from {
+        transform:translateX(0vw);
+    }
+
+    to {
+        transform:translateX(60vw);
+    }
+}
+
+@keyframes reverse-slide {
+    from {
+        transform:translateX(60vw);
+    }
+
+    to {
+        transform:translateX(0vw);
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

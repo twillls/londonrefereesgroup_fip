@@ -1,7 +1,8 @@
-$main-font: Arial;
+$main-font: "Avenir";
 $title-font: "SportsNight";
 $main-text-color: #757575;
 $accent-color: #bd2025;
+$darkaccent-color:#9f1f2c;
 $offwhite: #eaeff0;
 $offblack: #111111;
 $main-font-size: 1.2vw;
@@ -18,3 +19,7 @@ $breakpoint-max: 1920px;
 /* animation variables */
 
 $transition: 0.5s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+/* other variables */
+
+$border-radius: 0.8em;

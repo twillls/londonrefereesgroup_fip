@@ -12,6 +12,7 @@ body {
     font-family: $main-font;
     font-size: $mobile-font-size;
   }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: $main-font;
     text-decoration:none;
@@ -41,7 +42,7 @@ i {
 button { 
     font-size:1em;
     border: none;
-    border-radius: 6px;
+    border-radius: $border-radius;
     text-decoration:none;
     background-color:$accent-color;
     width:40%;
@@ -51,16 +52,22 @@ button {
     margin-top:4vh;
     transition:0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
     cursor:pointer;
+    font-family:"Avenir";
+    font-weight:500;
 }
 
 button:hover {
-    background-color:$offwhite;
-    color:$accent-color;
+    background-color:$darkaccent-color;
 }
 
 @font-face {
     font-family: "SportsNight";
     src: url(../fonts/SF_Sports_Night.ttf);
+  }
+
+  @font-face {
+    font-family: "Avenir";
+    src: url(../fonts/avenirnextcondensed.ttf);
   }
 
 /* tablet defaults */ 

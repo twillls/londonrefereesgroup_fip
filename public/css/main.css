@@ -1,5 +1,6 @@
 /* breakpoints for responsive layouts */
 /* animation variables */
+/* other variables */
 /* mobile defaults first */
 body {
   top: 0;
@@ -10,12 +11,12 @@ body {
   width: 100vw;
   background-color: #eaeff0;
   color: #757575;
-  font-family: Arial;
+  font-family: "Avenir";
   font-size: 1.2em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Arial;
+  font-family: "Avenir";
   text-decoration: none;
   font-weight: 400;
   color: #757575;
@@ -45,7 +46,7 @@ i {
 button {
   font-size: 1em;
   border: none;
-  border-radius: 6px;
+  border-radius: 0.8em;
   text-decoration: none;
   background-color: #bd2025;
   width: 40%;
@@ -55,16 +56,22 @@ button {
   margin-top: 4vh;
   transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
   cursor: pointer;
+  font-family: "Avenir";
+  font-weight: 500;
 }
 
 button:hover {
-  background-color: #eaeff0;
-  color: #bd2025;
+  background-color: #9f1f2c;
 }
 
 @font-face {
   font-family: "SportsNight";
   src: url(../fonts/SF_Sports_Night.ttf);
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url(../fonts/avenirnextcondensed.ttf);
 }
 
 /* tablet defaults */
@@ -88,64 +95,362 @@ button:hover {
   }
 }
 
-#top-nav {
-  width: 100vw;
-  display: absolute;
-  height: 8vh;
+@keyframes slide {
+  from {
+    transform: translateX(0vw);
+  }
+  to {
+    transform: translateX(60vw);
+  }
+}
+
+@keyframes reverse-slide {
+  from {
+    transform: translateX(60vw);
+  }
+  to {
+    transform: translateX(0vw);
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+#main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 50vw;
+  height: 100vh;
+  z-index: 999;
+}
+
+.menu-button {
+  position: absolute;
+  width: auto;
+  top: 2vh;
+  left: 4vw;
+  z-index: 1000;
+  transition: 0.3s ease-in;
+}
+
+.menu-button i {
+  font-size: 6vw;
+  color: #eaeff0;
+}
+
+.button-showing {
+  left: 42vw;
+}
+
+.top-nav {
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-items: left;
+  justify-content: flex-start;
+  background-color: #bd2025;
+  padding-top: 10vh;
+  margin-left: -60vw;
+  animation: slide 0.3s 0s 1 ease-in forwards;
+}
+
+.showing {
+  display: flex;
+}
+
+.hiding {
+  animation: reverse-slide 0.3s 0s 1 ease-in forwards;
+}
+
+.nav-box {
+  text-indent: 10vw;
+  text-align: left;
+  height: 10%;
+  background-color: #bd2025;
+}
+
+a {
+  font-size: 4vw;
+  font-family: "SportsNight";
+  color: #eaeff0;
+  pointer-events: none;
+}
+
+.nav-logo {
+  position: absolute;
+  width: 50vw;
+  max-width: 240px;
+  height: 20%;
+  top: 65vh;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-logo img {
+  width: 80%;
 }
 
 /* tablet */
 @media screen and (min-width: 768px) {
-  #top-nav {
-    width: 100vw;
-    display: absolute;
-    height: 8vh;
+  .top-nav {
+    width: 35vw;
+  }
+  a {
+    font-size: 2vw;
+  }
+  .menu-button i {
+    font-size: 3vw;
+  }
+  .nav-logo {
+    width: 25vw;
+    left: 5vw;
+    top: 65vh;
+    height: 15%;
+  }
+  .button-showing {
+    left: 27vw;
   }
 }
 
 /* desktop  */
 @media screen and (min-width: 1024px) {
-  header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    display: block;
+  #main-nav {
     width: 100vw;
     height: 16vh;
-    z-index: 999;
   }
-  #top-nav {
-    width: 96%;
+  .menu-button {
+    display: none;
+  }
+  .top-nav {
+    width: 100%;
     height: 100%;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     justify-items: center;
-    background-color: #bd2025;
   }
-  #top-nav a {
-    width: 13%;
-    font-family: "SportsNight";
-    font-size: 1.6vw;
+  .nav-box {
+    text-indent: 0;
     text-align: center;
-    cursor: pointer;
-    color: #eaeff0;
+    width: 20vw;
+    height: 100%;
     transition: 0.5s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
-    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
   }
-  #top-nav a:hover {
-    color: #111;
+  .nav-link {
+    margin: auto;
+    font-size: 1vw;
   }
-  #top-nav .nav-logo {
-    width: 20%;
+  .nav-box:hover {
+    background-color: #9f1f2c;
+  }
+  .nav-logo {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 20vw;
     height: 100%;
+    transition: 0.5s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .nav-logo img {
+    width: 100%;
+  }
+  .nav-logo:hover {
+    background-color: #9f1f2c;
+  }
+  .dropdown {
+    position: absolute;
+    top: 18vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #bd2025;
+    height: auto;
+    width: 13.7vw;
+    border-radius: 0.8em;
+  }
+  .dropdown .dd-box {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: 0.5s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+  }
+  .dropdown .dd-box .dd-sublink {
+    padding-left: 1vw;
+    font-family: "Avenir";
+    color: #eaeff0;
+    font-size: 0.6em;
+    pointer-events: none;
+  }
+  .dropdown .dd-box:hover {
+    background-color: #9f1f2c;
+    border-radius: inherit;
+  }
+}
+
+#main-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 16vh;
+  background: #111111;
+  color: #eaeff0;
+  font-size: 2vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+}
+
+#main-footer .biglink {
+  font-size: 2.3vw;
+  padding-bottom: 0.4vh;
+}
+
+#main-footer .smalllink {
+  font-size: 1.4vw;
+  padding-left: 1.2vw;
+  padding-bottom: 0.2vh;
+}
+
+#main-footer .left {
+  width: 60%;
+  padding-top: 2vh;
+  padding-left: 2vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+#main-footer .left .column {
+  margin-left: 4vw;
+  width: 25%;
+}
+
+#main-footer .right {
+  width: 30%;
+  text-align: center;
+}
+
+#main-footer .right .column {
+  width: 100%;
+}
+
+#main-footer .right .column .contact-info {
+  width: 100%;
+  text-align: center;
+  line-height: 1.5;
+}
+
+#main-footer .right .column .footer-name {
+  display: none;
+}
+
+#main-footer .copy {
+  position: fixed;
+  z-index: 10000;
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 1.2vw;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  #main-footer {
+    height: 20vh;
+    font-size: 1.6vw;
+  }
+  #main-footer .biglink {
+    font-size: 2vw;
+  }
+  #main-footer .smalllink {
+    font-size: 1.2vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #main-footer {
+    height: 16vh;
+    font-size: 0.6vw;
+  }
+  #main-footer .biglink {
+    font-size: 0.8vw;
+    transition: 0.5s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+  }
+  #main-footer .biglink:hover {
+    color: #bd2025;
+  }
+  #main-footer .smalllink {
+    font-size: 0.6vw;
+    padding-left: 1vw;
+    transition: 0.5s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+  }
+  #main-footer .smalllink:hover {
+    color: #bd2025;
+  }
+  #main-footer .left {
+    width: 50%;
+    padding: 0;
+    padding-left: 2vw;
+    justify-content: space-around;
+  }
+  #main-footer .left .column {
+    margin-left: 2vw;
+    line-height: 1.4;
+  }
+  #main-footer .right {
+    padding: 0;
+    padding-right: 2vw;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
     text-align: center;
+    align-items: center;
   }
-  #top-nav .nav-logo img {
-    height: 100%;
+  #main-footer .right .column {
+    width: 40%;
+  }
+  #main-footer .right .column .contact-info {
+    text-align: center;
+    line-height: 1.5;
+  }
+  #main-footer .right .column .footer-name {
+    display: block;
+    color: white;
+    font-family: "SportsNight";
+    font-size: 2vw;
+    text-align: right;
+  }
+  #main-footer .copy {
+    font-size: 0.5vw;
   }
 }
 
@@ -159,8 +464,8 @@ button:hover {
 
 #contents {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   top: 0;
   left: 0;
   z-index: 10;
@@ -170,36 +475,129 @@ button:hover {
 #landing {
   background-image: url("../images/bigref.jpg");
   background-repeat: none;
+  background-position-x: 170vw;
   background-size: cover;
   width: 100%;
   height: 100%;
 }
 
 #landing .landing_text {
+  padding-top: 24vh;
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 100%;
   margin: auto;
-  padding: 30vh;
-  padding-top: 40vh;
-  margin-left: 0;
   text-align: center;
 }
 
 #landing .landing_text h1 {
-  color: #eaeff0;
-  font-size: 3vw;
+  color: #bd2025;
+  font-size: 10vw;
   font-weight: 600;
+  margin-bottom: 0;
+  margin-left: -15vw;
 }
 
 #landing .landing_text h3 {
   color: #eaeff0;
-  margin-top: 4vh;
-  margin-bottom: 4vh;
-  font-size: 1.5vw;
+  font-weight: 400;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  font-size: 6vw;
+  margin-left: -39vw;
 }
 
 #landing .landing_text p {
+  background-color: #9f1f2c;
+  margin: auto;
+  width: 80%;
+  margin-top: 8vh;
+  font-size: 4vw;
+  padding: 5%;
+  border-radius: 0.8em;
   color: #eaeff0;
+}
+
+#landing .landing_text button {
+  background-color: #eaeff0;
+  color: #bd2025;
+  width: fit-content;
+}
+
+@media screen and (min-width: 768px) {
+  /*landing styles*/
+  #landing {
+    background-position-x: 120vw;
+  }
+  #landing .landing_text {
+    width: 100%;
+    padding-top: 18vh;
+    margin-left: 0;
+  }
+  #landing .landing_text h1 {
+    margin: 0;
+    font-size: 6vw;
+    margin-left: -35vw;
+  }
+  #landing .landing_text h3 {
+    margin: 0;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    font-size: 3vw;
+    margin-left: -35vw;
+  }
+  #landing .landing_text p {
+    margin: auto;
+    margin-top: 15vh;
+    width: 60%;
+    font-size: 2.5vw;
+  }
+  #landing button {
+    background-color: #bd2025;
+    color: #eaeff0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /*landing styles*/
+  #landing {
+    background-position-x: center;
+  }
+  #landing .landing_text {
+    width: 30%;
+    padding: 0;
+    margin: 0;
+    margin: auto;
+    padding-top: 40vh;
+    margin-left: 15vw;
+  }
+  #landing .landing_text h1 {
+    font-size: 3vw;
+    padding: 0;
+    margin: 0;
+  }
+  #landing .landing_text h3 {
+    padding: 0;
+    margin: 0;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    font-size: 1.5vw;
+  }
+  #landing .landing_text p {
+    padding: 0;
+    margin: 0;
+    background: none;
+    margin-top: 1vh;
+    font-size: 1vw;
+    width: 100%;
+  }
+  #landing button {
+    background-color: #bd2025;
+    color: #eaeff0;
+  }
+  #landing button:hover {
+    background-color: #bd2025;
+    color: #eaeff0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
