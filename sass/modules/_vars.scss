@@ -1,12 +1,25 @@
-$main-font: Arial;
+$main-font: "Avenir";
+$title-font: "SportsNight";
 $main-text-color: #757575;
-$accent-color: #fc7d1f;
+$accent-color: #bd2025;
+$darkaccent-color:#9f1f2c;
 $offwhite: #eaeff0;
 $offblack: #111111;
-$main-font-size: 1.3vw;
+$main-font-size: 1.2vw;
+$main-accent-size:1.6vw;
+$tablet-font-size: 1.6em;
+$mobile-font-size: 1.2em;
 
 /* breakpoints for responsive layouts */
 
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
-$breakpoint-maxwidth: 1920px;
+$breakpoint-max: 1920px;
+
+/* animation variables */
+
+$transition: 0.5s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+/* other variables */
+
+$border-radius: 0.8em;

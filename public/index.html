@@ -5,14 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/solid.css"type="text/css">
+    <link rel="stylesheet" href="css/brands.css"type="text/css">
+    <link rel="stylesheet" href="css/regular.css"type="text/css">
+    <link rel="stylesheet" href="css/fontawesome.css"type="text/css">
+    <link rel="stylesheet" href="css/font-awesome-animation.css"type="text/css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>London Referrees Group</title>
 </head>
 <body>
+
+    <!--NAVIGATION TOP BAR-->
+    <!--MAIN PAGE-->
+
     <main id="app">
-        <!--MAIN PAGE-->
+        <section key="nav" id="main-nav">
+            <div class="menu-button">
+                <i @click="toggleNav" class="fas fa-bars"></i>
+            </div>
+            <navbar @setview="updateView"></navbar>
+        </section>
+
+        <!--PAGE CONTENTS (DYNAMIC VUE COMPONENT)-->
+
+        <section id="contents">
+            <!--vue component here-->
+                <component :is="setView" @setview="updateView"></component>
+            <!-- this is the static version of the landing page for testing purposes-->
+           
+        </section>
+        
+        <foot key="footer" @setview="updateView"></foot>
     </main>
+
+
     <script type="module" src="js/main.js"></script>
 </body>
 </html>
