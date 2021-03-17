@@ -1310,7 +1310,7 @@ button:hover {
   color: #111111;
 }
 
-/* story styles */
+/* membership styles */
 #members {
   height: 100vh;
   width: 100vw;
@@ -1324,6 +1324,11 @@ button:hover {
   font-size: 60px;
   color: #111111;
   padding-bottom: 1vh;
+  /* different padding for structure version */
+}
+
+#members .members-head .structure-head {
+  padding-top: 50px;
 }
 
 #members .left {
@@ -1410,6 +1415,11 @@ button:hover {
   display: flex;
   flex-direction: column;
   text-align: center;
+  /* structure styles */
+  /* certification styles */
+  /* skills styles */
+  /*scheduling styles */
+  /* gallery styles */
 }
 
 #members .right .members-text .top {
@@ -1459,5 +1469,650 @@ button:hover {
 
 #members .right .members-text .bottom a:hover {
   color: #9f1f2c;
+}
+
+#members .right .members-text .structure-head {
+  font-size: 60px;
+  color: #111111;
+  padding-top: 50px;
+  padding-bottom: 4vh;
+  margin-top: 2vh;
+}
+
+#members .right .members-text .structure-container {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+#members .right .members-text .structure-container .structure {
+  height: inherit;
+  display: flex;
+  flex-direction: row;
+}
+
+#members .right .members-text .structure-container .structure div {
+  height: inherit;
+  width: 40%;
+}
+
+#members .right .members-text .structure-container .structure div div {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 4vh;
+}
+
+#members .right .members-text .structure-container .structure div .role-img {
+  background-color: black;
+}
+
+#members .right .members-text .structure-container .structure div .title {
+  margin-bottom: 1vh;
+  font-size: 26px;
+  color: #111111;
+}
+
+#members .right .members-text .structure-container .structure div .name {
+  color: #111111;
+  margin-bottom: 1vh;
+}
+
+#members .right .members-text .structure-container .structure div .info {
+  color: #111111;
+  margin-bottom: 1vh;
+}
+
+#members .right .members-text .structure-container .structure div .desc {
+  font-size: 12px;
+}
+
+#members .right .members-text .structure-container .structure .structure-left {
+  text-align: left;
+}
+
+#members .right .members-text .structure-container .structure .structure-right {
+  text-align: right;
+}
+
+#members .right .members-text .structure-container .structure .middle {
+  width: 20%;
+  height: auto;
+}
+
+#members .right .members-text .structure-container .structure .middle .line {
+  margin-left: 50%;
+  height: 100%;
+  width: 50%;
+  border-left: 2px solid #bd2025;
+}
+
+#members .right .members-text .partner-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2vh;
+  padding-top: 50px;
+  margin-bottom: 5vh;
+}
+
+#members .right .members-text .partner-bottom {
+  width: 100%;
+  overflow-y: auto;
+}
+
+#members .right .members-text .partner-bottom div {
+  width: 100%;
+  height: 250px;
+  color: #eaeff0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#members .right .members-text .partner-bottom div h3 {
+  font-size: 26px;
+  color: #eaeff0;
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-bottom: 1vh;
+}
+
+#members .right .members-text .partner-bottom div p {
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-bottom: 1vh;
+}
+
+#members .right .members-text .partner-bottom div a {
+  font-size: 18px;
+  color: #eaeff0;
+  padding-right: 100px;
+  padding-left: 100px;
+  transition: 0.5s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#members .right .members-text .partner-bottom div a:hover {
+  color: #bd2025;
+}
+
+#members .right .members-text .partner-bottom .partner {
+  text-align: right;
+  background-color: black;
+}
+
+#members .right .members-text .partner-bottom .partner-left {
+  width: 100%;
+  height: 250px;
+  text-align: left;
+  background-color: red;
+}
+
+#members .right .members-text .skills-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2vh;
+  padding-top: 50px;
+  margin-bottom: 5vh;
+}
+
+#members .right .members-text .skills-bottom {
+  width: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: row;
+  height: 80%;
+}
+
+#members .right .members-text .skills-bottom .workshop-left {
+  background-color: black;
+  width: 50%;
+  height: 100%;
+  color: #eaeff0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#members .right .members-text .skills-bottom .workshop-left h3 {
+  font-size: 26px;
+  color: #eaeff0;
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-bottom: 1vh;
+}
+
+#members .right .members-text .skills-bottom .workshop-left p {
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-bottom: 1vh;
+}
+
+#members .right .members-text .skills-bottom .workshop-left a {
+  font-size: 18px;
+  color: #eaeff0;
+  padding-right: 100px;
+  padding-left: 100px;
+  transition: 0.5s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#members .right .members-text .skills-bottom .workshop-left a:hover {
+  color: #bd2025;
+}
+
+#members .right .members-text .skills-bottom .workshop-right {
+  background-color: red;
+  width: 50%;
+  height: 100%;
+  color: #eaeff0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#members .right .members-text .skills-bottom .workshop-right h3 {
+  font-size: 26px;
+  color: #eaeff0;
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-bottom: 1vh;
+}
+
+#members .right .members-text .skills-bottom .workshop-right p {
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-bottom: 1vh;
+}
+
+#members .right .members-text .skills-bottom .workshop-right a {
+  font-size: 18px;
+  color: #eaeff0;
+  padding-right: 100px;
+  padding-left: 100px;
+  transition: 0.5s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#members .right .members-text .skills-bottom .workshop-right a:hover {
+  color: #bd2025;
+}
+
+#members .right .members-text .sched-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2vh;
+  padding-top: 50px;
+  margin-bottom: 5vh;
+}
+
+#members .right .members-text .sched-bottom {
+  width: 100%;
+  overflow-y: auto;
+}
+
+#members .right .members-text .sched-bottom .sched-text {
+  color: #111111;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4vh;
+  margin-top: 0;
+}
+
+#members .right .members-text .sched-bottom .tutorial {
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  width: 500px;
+  background-color: black;
+  margin-bottom: 2vh;
+}
+
+#members .right .members-text .sched-bottom h3 {
+  font-size: 40px;
+  color: #bd2025;
+  margin-bottom: 4vh;
+}
+
+#members .right .members-text .sched-bottom a {
+  color: #bd2025;
+  transition: 0.5s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#members .right .members-text .sched-bottom p {
+  margin-bottom: 2vh;
+}
+
+#members .right .members-text .sched-bottom a:hover {
+  color: #9f1f2c;
+}
+
+#members .right .members-text .gallery-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2vh;
+  padding-top: 50px;
+  margin-bottom: 5vh;
+}
+
+#members .right .members-text .gallery-bottom {
+  width: 100%;
+  overflow-y: auto;
+  height: 100%;
+}
+
+#members .right .members-text .gallery-bottom .row {
+  width: 100%;
+  background-color: blue;
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+#members .right .members-text .gallery-bottom .row .entry {
+  height: 100%;
+  width: 50%;
+  background-color: red;
+  transition: 0.5s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#members .right .members-text .gallery-bottom .row .entry:hover {
+  background-color: black;
+}
+
+/* join styles */
+#join {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 16vh;
+  margin-bottom: 16vh;
+}
+
+#join .join-head {
+  font-size: 40px;
+  color: #111111;
+  padding-bottom: 2vh;
+}
+
+#join .join-subhead {
+  font-size: 26px;
+}
+
+#join .join-container {
+  padding: 0;
+  margin: 0;
+  top: 0;
+  margin-top: 16vh;
+  margin-bottom: 16vh;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+
+#join .join-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 30%;
+  text-align: center;
+}
+
+#join .join-container .join-form-container {
+  height: 100%;
+  width: 100%;
+}
+
+#join .join-container .join-form-container .join-form {
+  height: 100%;
+  width: 70%;
+  background-color: #bd2025;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 0.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#join .join-container .join-form-container .join-form .row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#join .join-container .join-form-container .join-form .row input, #join .join-container .join-form-container .join-form .row textarea {
+  margin-left: 40px;
+  margin-right: 40px;
+  width: 40%;
+  padding: 1.5vh;
+  font-family: "Avenir";
+  border: none;
+  border-radius: 0.8em;
+  background-color: #eaeff0;
+  color: #111111;
+}
+
+#join .join-container .join-form-container .join-form .row .long {
+  width: 100%;
+}
+
+#join .join-container .join-form-container .join-form .row .message {
+  height: 240px;
+  width: 100%;
+}
+
+#join .join-container .join-form-container .join-form .row input[type=submit] {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: -20px;
+  width: 100%;
+  padding: 1.5vh;
+  font-family: "Avenir";
+  font-size: 26px;
+  color: #bd2025;
+  border: none;
+  border-radius: 0.8em;
+  transition: 0.5s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+}
+
+#join .join-container .join-form-container .join-form .row input[type=submit]:hover {
+  background-color: #bd2025;
+  color: #eaeff0;
+}
+
+/* juniors styling */
+#juniors {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#juniors .jr-container {
+  padding: 0;
+  top: 0;
+  width: 100%;
+  margin-top: 16vh;
+  margin-bottom: 16vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#juniors .jr-container .left {
+  padding-top: 50px;
+  width: 50%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+#juniors .jr-container .left .jr-head {
+  text-align: center;
+  font-size: 40px;
+  color: #111111;
+  padding-bottom: 2vh;
+  height: 10%;
+}
+
+#juniors .jr-container .left .info-container {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+#juniors .jr-container .left .info-container h4 {
+  text-align: center;
+  font-size: 26px;
+  color: #111111;
+  margin-bottom: 1vh;
+}
+
+#juniors .jr-container .left .info-container .info {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 4vh;
+  margin-top: 8vh;
+}
+
+#juniors .jr-container .left .info-container .info .about {
+  width: 50%;
+  text-align: left;
+}
+
+#juniors .jr-container .left .info-container .info .apply {
+  width: 50%;
+  text-align: center;
+}
+
+#juniors .jr-container .left .info-container .info .apply .q {
+  color: #111111;
+  margin-top: 1vh;
+}
+
+#juniors .jr-container .left .info-container .info .apply a {
+  color: #bd2025;
+  transition: 0.5s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#juniors .jr-container .left .info-container .info .apply a:hover {
+  color: #9f1f2c;
+}
+
+#juniors .jr-container .left .info-container .dates {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  padding-bottom: 12vh;
+}
+
+#juniors .jr-container .left .info-container .dates h4 {
+  margin-bottom: 2vh;
+}
+
+#juniors .jr-container .left .info-container .dates .dates-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#juniors .jr-container .left .info-container .dates .dates-container .events {
+  width: 50%;
+  font-size: 18px;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+#juniors .jr-container .left .info-container .dates .dates-container .events p {
+  margin-bottom: 1vh;
+  color: #111111;
+}
+
+#juniors .jr-container .left .info-container .dates .dates-container .icon {
+  text-align: right;
+  margin: auto;
+  width: 50%;
+}
+
+#juniors .jr-container .left .info-container .dates .dates-container .icon i {
+  font-size: 200px;
+}
+
+#juniors .jr-container .right {
+  width: 50%;
+  height: inherit;
+  background-color: #111111;
+}
+
+#juniors .jr-container .right .level-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+  color: #eaeff0;
+}
+
+#juniors .jr-container .right .level-container h3 {
+  text-align: center;
+  font-size: 40px;
+  color: #eaeff0;
+  margin-bottom: 6vh;
+}
+
+#juniors .jr-container .right .level-container p {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#juniors .jr-container .right .level-container .level-select {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#juniors .jr-container .right .level-container .level-select .select {
+  cursor: pointer;
+}
+
+/* education styles */
+#edu {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#edu .edu-container {
+  padding: 0;
+  top: 0;
+  width: 100%;
+  margin-top: 16vh;
+  margin-bottom: 16vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#edu .edu-container .left {
+  padding-top: 50px;
+  width: 50%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+#edu .edu-container .right {
+  padding-top: 50px;
+  width: 50%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
 }
 /*# sourceMappingURL=main.css.map */

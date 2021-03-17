@@ -1,5 +1,5 @@
 export default {
-    name: "Gallery",
+    name: "Scheduling",
 
     props: [""],
 
@@ -26,42 +26,22 @@ export default {
         </div>
         <div class="right">
             <div class="members-text">
-                <div class="gallery-top">
-                    <h2 class="members-head">GALLERY</h2>
+                <div class="sched-top">
+                    <h2 class="members-head">SCHEDULING</h2>
                 </div>
-                <div class="gallery-bottom">
-                    <div class="row">
-                        <div class="entry">
-                        </div>
-                        <div class="entry">
-                        </div>
+                <div class="sched-bottom">
+                <p class="sched-text">London Referees Group is proud to work with Horizon Web Ref to bring you a streamlined scheduling platform.</p>
+                    <h3>HORIZON WEB REF TUTORIAL (VIDEO)</h3>
+                    <div class="tutorial">
                     </div>
-                     <div class="row">
-                        <div class="entry">
-                        </div>
-                        <div class="entry">
-                        </div>
-                    </div>
-                     <div class="row">
-                        <div class="entry">
-                        </div>
-                        <div class="entry">
-                        </div>
-                    </div>
+                    <p>Visit Horizon Web <a href="/" class="register-link">here</a>.</p>
                 </div>
             </div>
-        </div>   
+        </div>
+                
     </div>
     `,
 
-    computed: {
-    },
-
-    components: {
-
-    },
-
     methods: {
     }
-
 }

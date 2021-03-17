@@ -85,7 +85,9 @@ export default {
                     { name: "structure", text: "Committee Structure"},
                     { name: "certification", text: "Partner Certification Clinics"},
                     { name: "skills", text: "Skill Building Workshops"},
-                    { name: "gallery", text: "Gallery"}
+                    { name: "scheduling", text: "Scheduling"},
+                    { name: "gallery", text: "Gallery"},
+                    { name: "join", text: "Application"}
                 ]
             }
             this.ddlist = thisList;

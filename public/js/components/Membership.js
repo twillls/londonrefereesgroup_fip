@@ -44,7 +44,8 @@ export default {
                     <p>Register your contact information <a href="/" class="register-link">here</a>.</p>
                 </div>
             </div>
-        </div>                
+        </div>
+                
     </div>
     `,
 

@@ -7,6 +7,12 @@ import President from "./components/President.js";
 import Contact from "./components/Contact.js";
 import Services from "./components/Services.js";
 import Membership from "./components/Membership.js";
+import Structure from "./components/Structure.js";
+import Certification from "./components/Certification.js";
+import Skills from "./components/Skills.js";
+import Scheduling from "./components/Scheduling.js";
+import Gallery from "./components/Gallery.js";
+import Join from "./components/Join.js";
 import Juniors from "./components/Juniors.js";
 import Education from "./components/Education.js";
 import Booking from "./components/Booking.js";
@@ -20,7 +26,7 @@ import Footer from "./components/Footer.js";
 
         data: {
             currentView: "",
-            newView: "members"
+            newView: "landing"
          },
 
             mounted: function() {   
@@ -69,6 +75,12 @@ import Footer from "./components/Footer.js";
             "contact": Contact,
             "services": Services,
             "members": Membership,
+            "structure": Structure,
+            "certification": Certification,
+            "skills": Skills,
+            "scheduling": Scheduling,
+            "gallery": Gallery,
+            "join": Join,
             "jr": Juniors,
             "edu": Education,
             "booking": Booking,
