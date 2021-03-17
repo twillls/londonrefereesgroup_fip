@@ -1,6 +1,10 @@
 import Landing from "./components/Landing.js";
 import NavBar from "./components/NavBar.js";
 import About from "./components/About.js";
+import Story from "./components/Story.js";
+import Partners from "./components/Partners.js";
+import President from "./components/President.js";
+import Contact from "./components/Contact.js";
 import Services from "./components/Services.js";
 import Membership from "./components/Membership.js";
 import Juniors from "./components/Juniors.js";
@@ -16,7 +20,7 @@ import Footer from "./components/Footer.js";
 
         data: {
             currentView: "",
-            newView: "landing"
+            newView: "members"
          },
 
             mounted: function() {   
@@ -42,7 +46,6 @@ import Footer from "./components/Footer.js";
                 let nav = document.querySelector(".top-nav");
                 let navbutton = document.querySelector(".menu-button");
                 if(!nav.classList.contains("showing")) {
-
                     nav.classList.add("showing");
                     navbutton.classList.add("button-showing");
                 } else {
@@ -60,6 +63,10 @@ import Footer from "./components/Footer.js";
             "landing": Landing,
             "navbar": NavBar,
             "about": About,
+            "story": Story,
+            "partners": Partners,
+            "message": President,
+            "contact": Contact,
             "services": Services,
             "members": Membership,
             "jr": Juniors,

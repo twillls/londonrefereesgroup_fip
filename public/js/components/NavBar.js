@@ -58,12 +58,14 @@ export default {
 
     methods: {
         setView(e) {
-            debugger;
             let newView = e.target.getAttribute("name");
             this.$emit("setview", newView);
         },
 
         openDropdown(e) {
+            if(screen.width < 1024) {
+                return;
+            } else {
             let thisLink =  e.target.getAttribute("name");
             let dd = document.querySelector(".dropdown");
             var thisList = [];
@@ -77,14 +79,6 @@ export default {
                     { name: "contact", text: "Contact Us"},
                 ]
             }
-            else if (thisLink == "services") {
-                dd.style.transform = "translateX(13.7vw)";
-                thisList = [
-                    { name: "members", text: "Membership"},
-                    { name: "training", text: "Training"},
-                    { name: "booking", text: "Booking"},
-                ];
-            }
             else if (thisLink == "members") {
                 dd.style.transform = "translateX(27.4vw)";
                 thisList = [
@@ -95,6 +89,7 @@ export default {
                 ]
             }
             this.ddlist = thisList;
+        }
         },
 
         closeDropdown(e) {
