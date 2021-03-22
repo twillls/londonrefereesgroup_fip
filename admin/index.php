@@ -49,7 +49,9 @@ if(isset($_POST['submit'])){
             </ul>
         </nav>        
 
-        <img class="admin-logo" src="../public/images/logo.png" alt="London Referees Group">
+        <div class="logo-container">
+            <a href="index.php"><img class="admin-logo" src="../public/images/logo.png" alt="London Referees Group"></a>
+        </div>
 
 
         <button class="admin-nav-logout">
@@ -64,7 +66,7 @@ if(isset($_POST['submit'])){
         <h1 class="hidden">Account Information - Update</h1>
         <h2>Account Info</h2>
 
-        <?php if (!empty($current_user)): ?> 
+        <?php if (!empty($current_user)): ?>
 
             <form action="index.php" method="POST">
             <!-- Use POST - do not show sensitive information in URL -->

@@ -7,19 +7,17 @@
         justify-content: space-between;
 
         button {
-            padding: 0;
-            margin: 0;
             background: none;
-            border-radius: 100px;
+
             border: 1px solid black;
             color: black;
 
-            font-size: 16px;
+            font-size: 12px;
 
             width: 15%;
             a {
                 font-family: $main-font;
-                font-size: 16px;
+                font-size: 12px;
             }
         }
 

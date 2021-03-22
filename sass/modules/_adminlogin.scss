@@ -1,8 +1,13 @@
-.admin-logo {
-    width: 20vw;
-    margin: 0 25%;
+.logo-container{
+    margin: 0 15%;
 
-    background-color: black;
+    a { pointer-events: all;}
+
+    .admin-logo {
+        background-color: black;
+        margin: 0 auto;
+        width: 100%;        
+    }
 }
 
 .admin-container {
@@ -18,6 +23,8 @@
             border: 1px solid black;
             border-radius: 100px;
             color: grey;
+
+            display: block;
 
             letter-spacing: 1px;
 

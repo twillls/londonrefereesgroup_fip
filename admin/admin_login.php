@@ -33,8 +33,10 @@ if(isset($_POST['submit'])){
 <body>
 
 <?php echo !empty($message)?$message:'';?>
-    <img class="admin-logo" src="../public/images/logo.png" alt="London Referees Group">
-
+    <div class="logo-container">
+        <img class="admin-logo" src="../public/images/logo.png" alt="London Referees Group">
+    </div>
+    
     <div class="admin-container">
         <form class="admin-login" action="admin_login.php" method="post">
             <label class="hidden" for="username"></label>
