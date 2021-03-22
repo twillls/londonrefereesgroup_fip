@@ -1,0 +1,33 @@
+.admin-logo {
+    width: 20vw;
+    margin: 0 25%;
+
+    background-color: black;
+}
+
+.admin-container {
+    width: 100vw;
+
+    .admin-login {
+        margin: 0 10%;
+        text-align: center;
+
+        .admin-input {
+            background-color: $offwhite;
+
+            border: 1px solid black;
+            border-radius: 100px;
+            color: grey;
+
+            letter-spacing: 1px;
+
+            margin: 10px auto;
+            padding: 5px;
+            text-align: center;
+
+            &:focus-visible{
+                outline: none;
+            }
+        }
+    }
+}
