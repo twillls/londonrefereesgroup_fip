@@ -6,7 +6,7 @@
     height: 16vh;
     background:$offblack;
     color:$offwhite;
-    font-size:2vw;
+    font-size:$mobile-smaller-size;
     display:flex;
     flex-direction:row;
     justify-content:space-between;
@@ -14,12 +14,12 @@
     z-index:9999;
 
     .biglink {
-        font-size:2.3vw;
+        font-size:$mobile-small-size;
         padding-bottom:0.4vh;
     }
 
     .smalllink {
-        font-size:1.4vw;
+        font-size:$mobile-smaller-size;
         padding-left:1.2vw;
         padding-bottom:0.2vh;
     }
@@ -59,7 +59,7 @@
         bottom:0;
         margin:0;
         width:100%;
-        font-size:1.2vw;
+        font-size:$mobile-smaller-size;
         text-align:center;
     }
 }
@@ -67,13 +67,13 @@
 @media screen and (min-width: $breakpoint-tablet) {
     #main-footer {
         height:20vh;
-        font-size:1.6vw;
+        font-size:$tablet-smaller-size;
         .biglink {
-            font-size:2vw;
+            font-size:$tablet-small-size;
         }
 
         .smalllink {
-            font-size:1.2vw;
+            font-size:$tablet-smaller-size;
         }
     }
 }

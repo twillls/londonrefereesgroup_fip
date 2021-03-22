@@ -29,11 +29,11 @@ p {
     margin: 0;
     padding: 0;
 }
-a {
-    color: $main-text-color;
-    text-decoration: none;
-}
 
+a {
+  text-decoration:none;
+  color:$main-text-color;
+}
 b {
     font-weight: 600;
 }
@@ -84,7 +84,7 @@ button:hover {
   
   @media screen and (min-width: $breakpoint-desktop) {
     body {
-        font-size: $main-font-size;
+        font-size: $desktop-font-size;
         max-width:1920px;
     }
 

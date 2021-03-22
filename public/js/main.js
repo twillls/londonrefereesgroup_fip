@@ -1,8 +1,18 @@
 import Landing from "./components/Landing.js";
 import NavBar from "./components/NavBar.js";
 import About from "./components/About.js";
+import Story from "./components/Story.js";
+import Partners from "./components/Partners.js";
+import President from "./components/President.js";
+import Contact from "./components/Contact.js";
 import Services from "./components/Services.js";
 import Membership from "./components/Membership.js";
+import Structure from "./components/Structure.js";
+import Certification from "./components/Certification.js";
+import Skills from "./components/Skills.js";
+import Scheduling from "./components/Scheduling.js";
+import Gallery from "./components/Gallery.js";
+import Join from "./components/Join.js";
 import Juniors from "./components/Juniors.js";
 import Education from "./components/Education.js";
 import Booking from "./components/Booking.js";
@@ -42,7 +52,6 @@ import Footer from "./components/Footer.js";
                 let nav = document.querySelector(".top-nav");
                 let navbutton = document.querySelector(".menu-button");
                 if(!nav.classList.contains("showing")) {
-
                     nav.classList.add("showing");
                     navbutton.classList.add("button-showing");
                 } else {
@@ -60,8 +69,18 @@ import Footer from "./components/Footer.js";
             "landing": Landing,
             "navbar": NavBar,
             "about": About,
+            "story": Story,
+            "partners": Partners,
+            "message": President,
+            "contact": Contact,
             "services": Services,
             "members": Membership,
+            "structure": Structure,
+            "certification": Certification,
+            "skills": Skills,
+            "scheduling": Scheduling,
+            "gallery": Gallery,
+            "join": Join,
             "jr": Juniors,
             "edu": Education,
             "booking": Booking,

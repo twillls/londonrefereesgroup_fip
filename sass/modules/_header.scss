@@ -17,13 +17,15 @@
     transition:0.3s ease-in;
     i {
         font-size:6vw;
-        color:$offwhite;
+        color:$accent-color;
+        transition:0.3s ease-in;
     }
 }
 
 
 .button-showing {
     left:42vw;
+     i { color: $offwhite}
 }
 
 
@@ -54,7 +56,7 @@
     height:10%;
     background-color:$accent-color;
 }
-a { 
+.nav-link { 
     font-size:4vw;
     font-family:"SportsNight";
     color:$offwhite;
@@ -82,7 +84,7 @@ a {
     .top-nav {
         width:35vw;
     }
-    a { 
+    .nav-link { 
         font-size:2vw;
     }
 
@@ -94,7 +96,7 @@ a {
     .nav-logo {
         width:25vw;
         left:5vw;
-        top:65vh;
+        top:0vh;
         height:15%;
     }
 
@@ -139,7 +141,7 @@ a {
     }
     .nav-link { 
         margin:auto;
-        font-size:1vw;
+        font-size:1.2vw;
     }
 
     .nav-box:hover { 
@@ -192,7 +194,7 @@ a {
                 padding-left:1vw;
                 font-family:$main-font;
                 color:$offwhite;
-                font-size:0.6em;
+                font-size:1vw;
                 pointer-events: none;
             }
         }

@@ -5,10 +5,48 @@ $accent-color: #bd2025;
 $darkaccent-color:#9f1f2c;
 $offwhite: #eaeff0;
 $offblack: #111111;
-$main-font-size: 1.2vw;
-$main-accent-size:1.6vw;
-$tablet-font-size: 1.6em;
-$mobile-font-size: 1.2em;
+
+/*desktop font styles*/
+
+$desktop-font-size: 16px;
+$desktop-small-size: 14px;
+$desktop-smaller-size: 12px;
+$desktop-bigger-size: 18px;
+$desktop-head-size:60px;
+$desktop-midhead-size:40px;
+$desktop-subhead-size:26px;
+
+/*tablet font styles*/
+
+$tablet-font-size: 14px;
+$tablet-small-size: 12px;
+$tablet-smaller-size: 10px;
+$tablet-head-size:40px;
+$tablet-subhead-size:24px;
+
+/*mobile font styles*/
+
+$mobile-font-size: 12px;
+$mobile-small-size: 10px;
+$mobile-smaller-size: 8px;
+$mobile-head-size: 40px;
+$mobile-subhead-size: 24px;
+
+/*mobile padding styles*/
+
+$mobile-left-pad: 20px;
+$mobile-top-pad:200px;
+
+/*tablet padding styles*/
+
+$tablet-top-pad:100px;
+$tablet-left-pad:50px;
+
+/*desktop padding styles*/
+$desktop-headfoot-height:16vh; 
+$desktop-top-pad:50px;
+$desktop-middle-top-pad:400px;
+$desktop-left-pad:100px;
 
 /* breakpoints for responsive layouts */
 

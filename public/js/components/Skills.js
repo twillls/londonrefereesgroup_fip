@@ -1,5 +1,5 @@
 export default {
-    name: "Certification",
+    name: "Skills",
 
     props: [""],
 
@@ -26,24 +26,19 @@ export default {
         </div>
         <div class="right">
             <div class="members-text">
-                <div class="partner-top">
-                    <h2 class="members-head">PARTNER CERTIFICATION CLINICS</h2>
+                <div class="skills-top">
+                    <h2 class="members-head">SKILL BUILDING WORKSHOPS</h2>
                 </div>
-                <div class="partner-bottom">
-                    <div class="partner">
-                        <h3 class="name">PARTNER NAME</h3>
-                        <p class="desc">Short description of available certifications.</p>
-                        <a class="visit" href="/">VISIT WEBSITE</a>
+                <div class="skills-bottom">
+                    <div class="workshop-left">
+                        <h3 class="name">WORKSHOP NAME</h3>
+                        <p class="desc">Short description of what this workshop is, workshop times, etc.</p>
+                        <a class="visit" href="/contact">CONTACT US TO APPLY</a>
                     </div>
-                    <div class="partner-left">
-                        <h3 class="name">PARTNER NAME</h3>
-                        <p class="desc">Short description of available certifications.</p>
-                        <a class="visit" href="/">VISIT WEBSITE</a>
-                    </div>
-                    <div class="partner">
-                        <h3 class="name">PARTNER NAME</h3>
-                        <p class="desc">Short description of available certifications.</p>
-                        <a class="visit" href="/">VISIT WEBSITE</a>
+                    <div class="workshop-right">
+                    <h3 class="name">WORKSHOP NAME</h3>
+                    <p class="desc">Short description of available certifications.</p>
+                        <a class="visit" href="/contact">CONTACT US TO APPLY</a>
                     </div>
                 </div>
             </div>
