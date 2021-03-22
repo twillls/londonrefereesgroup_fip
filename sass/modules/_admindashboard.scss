@@ -1,0 +1,43 @@
+.admin-dashboard{
+
+    .admin-dash-header {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        button {
+            background: none;
+
+            border: 1px solid black;
+            color: black;
+
+            font-size: 12px;
+
+            width: 15%;
+            a {
+                font-family: $main-font;
+                font-size: 12px;
+            }
+        }
+
+        .admin-drop-nav{
+            background-color: white;
+        }
+
+    
+        nav {
+            ul {
+                li {
+                    list-style-type: none;
+                }
+            }
+        }    
+    }
+
+    a {
+        color: black !important;
+        pointer-events: all !important;
+
+    }
+}

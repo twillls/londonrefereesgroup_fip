@@ -23,10 +23,17 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create User</title>
+
+    <link rel="stylesheet" href="../public/css/main.css">
+
+    <title>Create A New User</title>
 </head>
 <body>
-    <h2>Create User</h2>
+    <div class="logo-container">
+        <a href="index.php"><img class="admin-logo" src="../public/images/logo.png" alt="London Referees Group"></a>
+    </div>
+    
+    <h2>Create A New User</h2>
     <?php echo !empty($message)?$message:'';?>
     <form action="admin_createuser.php" method="POST">
     <!-- Use POST - do not show sensitive information in URL -->

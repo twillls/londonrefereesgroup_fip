@@ -25,20 +25,28 @@ if(isset($_POST['submit'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to the Admin Panel</title>
+
+    <link rel="stylesheet" href="../public/css/main.css">
+
+    <title>London Referees Group - Login</title>
 </head>
 <body>
 
 <?php echo !empty($message)?$message:'';?>
-
-    <form action="admin_login.php" method="post">
-    <label for="username">Username:</label>
-    <input id="username" type="text" name="username" value="">
-    <br><br>
-    <label for="password">Password:</label>
-    <input id="password" type="text" name="password" value="">
-    <br><br>
-    <button type="submit" name="submit">Show me the money</button>
-    </form>
+    <div class="logo-container">
+        <img class="admin-logo" src="../public/images/logo.png" alt="London Referees Group">
+    </div>
+    
+    <div class="admin-container">
+        <form class="admin-login" action="admin_login.php" method="post">
+            <label class="hidden" for="username"></label>
+            <input placeholder="username" class="admin-input" id="username" type="text" name="username" value="">
+            
+            <label class="hidden" for="password"></label>
+            <input placeholder="password" class="admin-input" id="password" type="password" name="password" value="">
+        
+            <button type="submit" name="submit">Login</button>
+        </form>
+    </div>
 </body>
 </html>

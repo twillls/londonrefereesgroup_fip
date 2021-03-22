@@ -1,0 +1,40 @@
+.logo-container{
+    margin: 0 15%;
+
+    a { pointer-events: all;}
+
+    .admin-logo {
+        background-color: black;
+        margin: 0 auto;
+        width: 100%;        
+    }
+}
+
+.admin-container {
+    width: 100vw;
+
+    .admin-login {
+        margin: 0 10%;
+        text-align: center;
+
+        .admin-input {
+            background-color: $offwhite;
+
+            border: 1px solid black;
+            border-radius: 100px;
+            color: grey;
+
+            display: block;
+
+            letter-spacing: 1px;
+
+            margin: 10px auto;
+            padding: 5px;
+            text-align: center;
+
+            &:focus-visible{
+                outline: none;
+            }
+        }
+    }
+}

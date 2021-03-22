@@ -45,7 +45,7 @@ function login($username, $password, $ip)
 
     } else {
         // Invalid attemp, rejected!
-        return "Learn how to type!!";
+        return "Incorrect username or password";
     }
 }
 
