@@ -44,6 +44,9 @@ if(isset($_POST['submit'])){
             <ul>
                 <li><?php if(isCurrentUserAdminAbove()):?>
                     <a href="admin_createuser.php">Create User</a>
+                    <a href="admin_editallusers.php">Edit All Users</a>    
+                    <a href="admin_deleteuser.php">Delete User</a>
+
                     <?php endif;?></li>
                 <!-- <li><a href="admin_edituser.php">Edit User</a></li> --> <!-- Edit User page is not needed as account details are to be updated on index -->
             </ul>
