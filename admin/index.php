@@ -36,7 +36,7 @@ if(isset($_POST['submit'])){
     <title>London Referees Group - Admin Dashboard</title>
 </head>
 <body class="admin-dashboard">
-
+<main id="app">
     <header class="admin-dash-header">
         <button class="admin-dropdown">admin</button>
 
@@ -46,6 +46,8 @@ if(isset($_POST['submit'])){
                     <a href="admin_createuser.php">Create User</a>
                     <a href="admin_editallusers.php">Edit All Users</a>    
                     <a href="admin_deleteuser.php">Delete User</a>
+
+                    <button class="admin-drop-close">close</button>
 
                     <?php endif;?></li>
                 <!-- <li><a href="admin_edituser.php">Edit User</a></li> --> <!-- Edit User page is not needed as account details are to be updated on index -->
@@ -61,12 +63,10 @@ if(isset($_POST['submit'])){
             <a href="admin_logout.php">logout</a>
         </button>
     </header>
-
-    <h2>Admin Dashboard - <?php echo $_SESSION['user_name'];?></h2>
-    <h3>You are a: <?php echo getCurrentUserLevel();?>.</h3>
-
-    <section>
+    
+    <section class="account-dashboard">
         <h1 class="hidden">Account Information - Update</h1>
+        <h2>Admin Dashboard - <?php echo $_SESSION['user_name'];?></h2>
         <h2>Account Info</h2>
 
         <?php if (!empty($current_user)): ?>
@@ -116,8 +116,8 @@ if(isset($_POST['submit'])){
         </form>
         <?php endif;?>
     </section>
-
-    <script src="../public/js/main.js"></script>
+    </main>
+    <script src="../public/js/main-admin.js"></script>
 
 </body>
 </html>

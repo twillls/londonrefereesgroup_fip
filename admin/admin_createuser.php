@@ -32,7 +32,8 @@ if(isset($_POST['submit'])){
     <div class="logo-container">
         <a href="index.php"><img class="admin-logo" src="../public/images/logo.png" alt="London Referees Group"></a>
     </div>
-    
+    <a href="index.php">Back to Dashboard</a>
+
     <h2>Create A New User</h2>
     <?php echo !empty($message)?$message:'';?>
     <form action="admin_createuser.php" method="POST">

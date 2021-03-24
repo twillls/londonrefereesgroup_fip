@@ -18,8 +18,8 @@ import Education from "./components/Education.js";
 import Booking from "./components/Booking.js";
 import Footer from "./components/Footer.js";
 
-(() => {
 
+(() => {
     new Vue({
 
         el: "#app",

@@ -28,6 +28,9 @@ if(isset($_POST['submit'])){
 </head>
 <body>
     <h2>All Users</h2>
+
+    <a href="index.php">Back to Dashboard</a>
+
     
     <?php echo !empty($message)?$message:'';?>
 
