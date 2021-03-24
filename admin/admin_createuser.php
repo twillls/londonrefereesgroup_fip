@@ -29,14 +29,13 @@ if(isset($_POST['submit'])){
     <title>Create A New User</title>
 </head>
 <body>
-    <div class="logo-container">
-        <a href="index.php"><img class="admin-logo" src="../public/images/logo.png" alt="London Referees Group"></a>
-    </div>
-    <a href="index.php">Back to Dashboard</a>
+    <?php include "../public/templates/header.php"; ?>
 
-    <h2>Create A New User</h2>
+    <h2 class="admin-content-title">Create A New User</h2>
+
+
     <?php echo !empty($message)?$message:'';?>
-    <form action="admin_createuser.php" method="POST">
+    <form class="account-info-form" action="admin_createuser.php" method="POST">
     <!-- Use POST - do not show sensitive information in URL -->
         <label for="first_name">First Name</label> 
         <input id="first_name" type="text" name="fname" value="">
@@ -68,8 +67,10 @@ if(isset($_POST['submit'])){
         <br><br>
 
         <button type="submit" name="submit">Create User</button>
-        
+        <a class="dashboard-link" href="index.php">Back to Dashboard</a>
+
     </form>
-    
+    <script src="../public/js/main-admin.js"></script>
+
 </body>
 </html>

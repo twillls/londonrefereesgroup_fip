@@ -35,43 +35,18 @@ if(isset($_POST['submit'])){
 
     <title>London Referees Group - Admin Dashboard</title>
 </head>
-<body class="admin-dashboard">
+<body>
 <main id="app">
-    <header class="admin-dash-header">
-        <button class="admin-dropdown">admin</button>
-
-        <nav class="admin-drop-nav hidden">
-            <ul>
-                <li><?php if(isCurrentUserAdminAbove()):?>
-                    <a href="admin_createuser.php">Create User</a>
-                    <a href="admin_editallusers.php">Edit All Users</a>    
-                    <a href="admin_deleteuser.php">Delete User</a>
-
-                    <button class="admin-drop-close">close</button>
-
-                    <?php endif;?></li>
-                <!-- <li><a href="admin_edituser.php">Edit User</a></li> --> <!-- Edit User page is not needed as account details are to be updated on index -->
-            </ul>
-        </nav>        
-
-        <div class="logo-container">
-            <a href="index.php"><img class="admin-logo" src="../public/images/logo.png" alt="London Referees Group"></a>
-        </div>
-
-
-        <button class="admin-nav-logout">
-            <a href="admin_logout.php">logout</a>
-        </button>
-    </header>
+    <?php include "../public/templates/header.php"; ?>
     
-    <section class="account-dashboard">
+    <section>
         <h1 class="hidden">Account Information - Update</h1>
-        <h2>Admin Dashboard - <?php echo $_SESSION['user_name'];?></h2>
-        <h2>Account Info</h2>
+        <h2 class="dashboard-title">Admin Dashboard - <?php echo $_SESSION['user_name'];?></h2>
+        <h2 class="admin-content-title">Account Info</h2>
 
         <?php if (!empty($current_user)): ?>
 
-            <form action="index.php" method="POST">
+            <form class="account-info-form" action="index.php" method="POST">
             <!-- Use POST - do not show sensitive information in URL -->
             <?php while($user_info = $current_user->fetch(PDO::FETCH_ASSOC)):?>
                 <label for="first_name">First Name</label> 
