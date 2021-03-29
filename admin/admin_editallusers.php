@@ -24,10 +24,17 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../public/css/main.css">
+
     <title>Edit All Users</title>
 </head>
 <body>
-    <h2>All Users</h2>
+    <?php include "../public/templates/header.php"; ?>
+
+    <h2 class="admin-content-title">All Users</h2>
+
+
     
     <?php echo !empty($message)?$message:'';?>
 
@@ -37,7 +44,7 @@ if(isset($_POST['submit'])){
     <!-- Which will redirect_to the edit user page -->
     <?php foreach ($getUsers as $user):?>
     <div>
-        <form action="admin_editallusers.php" method="POST">
+        <form class="account-info-form" action="admin_editallusers.php" method="POST">
         <!-- Use POST - do not show sensitive information in URL -->
             <label for="id">ID</label> 
             <input id="id" type="text" name="id" value="<?php echo $user['user_id']; ?>">
@@ -67,10 +74,13 @@ if(isset($_POST['submit'])){
                 <br><br>
             
             <button type="submit" name="submit">Update User</button>
-            
+            <a class="dashboard-link" href="index.php">Back to Dashboard</a>
+
         </form>
     </div>
 
     <?php endforeach;?>
+    <script src="../public/js/main-admin.js"></script>
+
 </body>
 </html>

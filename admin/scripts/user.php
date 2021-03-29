@@ -79,6 +79,41 @@ function getSingleUser($user_id)
     }
 }
 
+function getAllUsers()
+{
+    $pdo = Database::getInstance()->getConnection();
+
+    $get_all_user_query = 'SELECT * FROM tbl_user';
+    $users = $pdo->query($get_all_user_query);
+
+    // If users returned in query, return in browser.
+    // Otherwise, return false
+    if($users){
+        return $users;
+    } else {
+        return false;
+    }
+}
+
+function deleteUser($user_id)
+{
+    $pdo = Database::getInstance()->getConnection();
+
+    $delete_user_query = 'DELETE FROM tbl_user WHERE user_id = :id';
+    $delete_user_set = $pdo->prepare($delete_user_query);
+    $delete_user_result = $delete_user_set->execute(
+        array(
+            ':id'=>$user_id
+        )
+    );
+
+    if($delete_user_result && $delete_user_set->rowCount()>0){
+        redirect_to('admin_deleteuser.php');
+    } else {
+        return false;
+    }
+}
+
 function editUser($user_data)
 {
     if(empty($user_data['username'])||isUsernameExists($user_data['username'])){
@@ -112,6 +147,35 @@ function editUser($user_data)
         redirect_to('index.php');
     } else {
         return "Guess you got canned..";
+    }
+}
+
+function editAllUsers($user_data)
+{
+    $pdo = Database::getInstance()->getConnection();
+
+    $update_all_user_query = 'UPDATE tbl_user SET user_fname = :fname, user_name = :username, user_pass = :password, user_email = :email, user_level = :user_level WHERE user_id = :id';
+    $update_all_user_set = $pdo->prepare($update_all_user_query);
+    $update_all_user_result = $update_all_user_set->execute(
+        array(
+            ':fname'=>$user_data['fname'],
+            ':username'=>$user_data['username'],
+            ':password'=>$user_data['password'],
+            ':email'=>$user_data['email'],
+            ':user_level'=>$user_data['user_level'],
+            ':id'=>$user_data['id']
+        )
+    );
+
+    // This is a debugging tool
+    // It will show you the SQL query you are attemping
+    // $update_user_set->debugDumpParams();
+    // exit;
+
+    if($update_all_user_result){
+        redirect_to('index.php');
+    } else {
+        return 'Update failed';
     }
 }
 

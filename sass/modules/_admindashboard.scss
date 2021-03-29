@@ -1,43 +1,110 @@
-.admin-dashboard{
+.admin-dash-header {
+    display: flex;
+    flex-direction: row;
 
-    .admin-dash-header {
-        display: flex;
-        flex-direction: row;
+    justify-content: space-between;
 
-        justify-content: space-between;
+    button {
+        background: none;
 
-        button {
-            background: none;
+        border: 1px solid black;
+        color: black;
 
-            border: 1px solid black;
-            color: black;
+        font-size: 12px;
 
+        width: 15%;
+        a {
+            font-family: $main-font;
             font-size: 12px;
-
-            width: 15%;
-            a {
-                font-family: $main-font;
-                font-size: 12px;
-            }
         }
+    }
 
-        .admin-drop-nav{
+    .admin-drop-nav{
+        position: absolute;
+
+        ul {
             background-color: white;
-        }
+            padding: 5vh;
+            top: 0;
+            margin-top: 0;
 
-    
-        nav {
-            ul {
-                li {
-                    list-style-type: none;
+            li {
+                font-size: 1.2rem;
+                
+                a {
+                    display: block;
+                    padding: 2vh 0;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                .admin-drop-close{
+                    width: 50px;
+                    
+                    &:hover {
+                        background-color: $accent-color;
+                        color: white;
+                        border: 1px solid transparent;
+                    }
                 }
             }
-        }    
+        }
     }
 
-    a {
-        color: black !important;
-        pointer-events: all !important;
 
+    nav {
+        ul {
+            li {
+                list-style-type: none;
+            }
+        }
+    }    
+}
+
+
+.dashboard-title{
+    font-size: 1.4rem;
+    color: $offblack;
+}
+    
+.account-info-form {
+    margin: 3vh 3vw;
+    label {
+        font-size: 1.2rem;
     }
+}
+
+.admin-content-title{
+    color: $offblack;
+
+    font-size: 1.4rem !important;
+
+    margin: 4vh 2vw;
+}
+
+.dashboard-link{
+    font-size: 1.2rem;
+
+    margin: 3vh 3vw;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+a {
+    color: black !important;
+    pointer-events: all !important;
+
+}
+
+th{
+    font-size: 1.4rem !important;
+    color: $offblack;
+}
+
+td {
+    font-size: 1.1rem;
 }
