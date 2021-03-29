@@ -10,7 +10,7 @@
             <li><a href="admin_addAnnouncement.php">Add Announcement</a></li>
             <li><a href="admin_createuser.php">Create User</a></li>
             <li><a href="admin_editallusers.php">Edit All Users</a></li>
-            <li><a href="admin_deleteuser.php">Delete User</a></li>
+            <li><a href="admin_deleteuser.php">Delete Users</a></li>
             <li><a href="admin_edituser.php">Account Settings</a></li>
 
             <li><button class="admin-drop-close">close</button></li>

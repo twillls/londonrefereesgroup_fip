@@ -41,30 +41,30 @@ if(isset($_POST['submit'])){
 <body>
     <main>
         <?php include "../public/templates/header.php"; ?>
-        <h2>Account Settings</h2>
+        <h2 class="admin-content-title">Account Settings</h2>
 
         <?php echo !empty($message)?$message:'';?>
         <?php if (!empty($current_user)): ?> 
 
-            <form action="admin_edituser.php" method="POST">
+            <form class="account-info-form" action="admin_edituser.php" method="POST">
             <!-- Use POST - do not show sensitive information in URL -->
                 <?php while($user_info = $current_user->fetch(PDO::FETCH_ASSOC)):?>
                     <label for="first_name">First Name</label> 
                     <input id="first_name" type="text" name="fname" value="<?php echo $user_info['user_fname']; ?>">
-                    <br><br>
+                    
 
                     <label for="username">Username</label> 
                     <input id="username" type="text" name="username" value="<?php echo $user_info['user_name']; ?>">
-                    <br><br>
+                    
 
                     <label for="password">Password</label> 
                     <input id="password" type="text" name="password" value="<?php echo $user_info['user_pass']; ?>">
                     <!-- change type="text" to type="password" for production to hide password when typed - better UX -->
-                    <br><br>
+                    
 
                     <label for="email">Email</label> 
                     <input id="email" type="email" name="email" value="<?php echo $user_info['user_email']; ?>">
-                    <br><br>
+                    
 
                     <!-- This dropdown should only be available for user level admin -->
                     <?php if(isCurrentUserAdminAbove()):?>
@@ -78,7 +78,7 @@ if(isset($_POST['submit'])){
                             <?php endforeach;?>
 
                         </select>
-                        <br><br>
+                        
                     <?php endif;?>
 
                     <button type="submit" name="submit">Update Account</button>

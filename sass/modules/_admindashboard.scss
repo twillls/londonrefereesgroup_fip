@@ -1,23 +1,37 @@
 .admin-dash-header {
+    background-color: $accent-color;
     display: flex;
     flex-direction: row;
 
     justify-content: space-evenly;
 
     button {
-        background: none;
-
-        border: 1px solid black;
-        color: black;
-
         font-size: 12px;
-
-        margin: 5%;
-
+        top: 0;
+        margin: 0;
         width: 15%;
         a {
             font-family: $main-font;
             font-size: 12px;
+        }
+    }
+
+    .logo-container{
+        margin: 0 10%;
+    
+        a { pointer-events: all;}
+    
+        .admin-logo {
+            background-color: $accent-color;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 500px;        
+        }
+    }
+
+    .admin-nav-logout {
+        a {
+            color: $offwhite;
         }
     }
 
@@ -36,6 +50,7 @@
                 font-size: 1.2rem;
                 
                 a {
+                    color: $offblack;
                     display: block;
                     padding: 2vh 0;
 
@@ -67,17 +82,9 @@
     }    
 }
 
-
 .dashboard-title{
     font-size: 1.4rem;
     color: $offblack;
-}
-    
-.account-info-form {
-    margin: 3vh 3vw;
-    label {
-        font-size: 1.2rem;
-    }
 }
 
 .admin-content-title{
@@ -89,9 +96,27 @@
 }
 
 .dashboard-link{
-    font-size: 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.8em;
+    background-color: $accent-color;
+    width: 40%;
+    padding: 4%;
+    color: $offwhite;
+    transition: .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+    cursor: pointer;
 
-    margin: 3vh 3vw;
+    &:hover{
+        background-color: $darkaccent-color;
+    }
+}
+
+#edit-all-users-link {
+    color: $offblack;
+    
+    margin-left: 2vw;
+    font-size: 1rem;
 
     &:hover{
         text-decoration: underline;
@@ -99,9 +124,7 @@
 }
 
 a {
-    color: black !important;
     pointer-events: all !important;
-
 }
 
 th{

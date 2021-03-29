@@ -33,8 +33,8 @@ if(isset($_POST['submit'])){
     <main>
         <?php include "../public/templates/header.php"; ?>
 
-        <h2 class="admin-content-title">All Users</h2>
-
+        <h2 class="admin-content-title">Edit All Users</h2>
+        <a id="edit-all-users-link" href="index.php">Back to Dashboard</a>
         <?php echo !empty($message)?$message:'';?>
 
         <!-- Query All Users and Show them Here -->
@@ -47,20 +47,20 @@ if(isset($_POST['submit'])){
             <!-- Use POST - do not show sensitive information in URL -->
                 <label for="id">ID</label> 
                 <input id="id" type="text" name="id" value="<?php echo $user['user_id']; ?>">
-                <br><br>
+                
                 <label for="first_name">First Name</label> 
                 <input id="first_name" type="text" name="fname" value="<?php echo $user['user_fname']; ?>">
-                <br><br>
+                
                 <label for="username">Username</label> 
                 <input id="username" type="text" name="username" value="<?php echo $user['user_name']; ?>">
-                <br><br>
+                
                 <label for="password">Password</label> 
                 <input id="password" type="text" name="password" value="<?php echo $user['user_pass']; ?>">
                 <!-- change type="text" to type="password" for production to hide password when typed - better UX -->
-                <br><br>
+                
                 <label for="email">Email</label> 
                 <input id="email" type="email" name="email" value="<?php echo $user['user_email']; ?>">
-                <br><br>
+                
                 <!-- Hide this from user level editor: they should not be able to self-promote -->
                 
                 <label for="user_level">User Level</label>
@@ -70,10 +70,9 @@ if(isset($_POST['submit'])){
                             <option value="<?php echo $val;?>" <?php echo $val===(int)$user['user_level']?'selected':'';?> ><?php echo $label;?></option>
                         <?php endforeach;?>
                     </select>
-                    <br><br>
+                    
                 
                 <button type="submit" name="submit">Update User</button>
-                <a class="dashboard-link" href="index.php">Back to Dashboard</a>
 
             </form>
         </div>

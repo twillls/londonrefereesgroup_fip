@@ -5,9 +5,9 @@
 function getUserLevelMap()
 {
     return array(
-        '0'=>'Web Editor',
-        '1'=>'Web Admin',
-        '2'=>'Super Admin',
+        '0'=>'Parent',
+        '1'=>'Official',
+        '2'=>'Admin',
     );
 }
 

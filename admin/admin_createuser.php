@@ -26,13 +26,13 @@ if(isset($_POST['submit'])){
 
     <link rel="stylesheet" href="../public/css/main.css">
 
-    <title>Create A New User</title>
+    <title>Create A User</title>
 </head>
 <body>
     <main>
         <?php include "../public/templates/header.php"; ?>
 
-        <h2 class="admin-content-title">Create A New User</h2>
+        <h2 class="admin-content-title">Create A User</h2>
 
 
         <?php echo !empty($message)?$message:'';?>

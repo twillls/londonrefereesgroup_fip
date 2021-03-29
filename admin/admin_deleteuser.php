@@ -31,13 +31,13 @@ if(!$users){
 
     <link rel="stylesheet" href="../public/css/main.css">
 
-    <title>Delete User</title>
+    <title>Delete Users</title>
 </head>
 <body>
     <main>
         <?php include "../public/templates/header.php"; ?>
 
-        <h2 class="admin-content-title">Delete User</h2>
+        <h2 class="admin-content-title">Delete Users</h2>
 
         <?php echo !empty($message)?$message:'';?>
 

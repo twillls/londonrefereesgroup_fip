@@ -48,11 +48,8 @@ $getAnnouncements = getAllAnnouncements();
         <?php foreach ($getAnnouncements as $announcement):?>
             <div class="announcement-wrapper">
                 <h2><?php echo $announcement['announcement_title'];?></h2>
-                <p>
-                    <?php echo $announcement['announcement_body'];?>
-                    <span><?php echo $announcement['announcement_date'];?></span>
-                </p>
-                
+                <span><?php echo $announcement['announcement_date'];?></span>
+                <p><?php echo $announcement['announcement_body'];?></p>
             </div>
         <?php endforeach;?>
 

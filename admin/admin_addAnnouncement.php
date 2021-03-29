@@ -26,18 +26,18 @@ if(isset($_POST['submit'])){
 <body>
     <main>
         <?php include "../public/templates/header.php"; ?>
-        <h2>Add Announcement</h2>
+        <h2 class="admin-content-title">Add Announcement</h2>
 
         <?php echo !empty($message)?$message:'';?>
 
-        <form action="admin_addAnnouncement.php" method="POST">
+        <form class="account-info-form" action="admin_addAnnouncement.php" method="POST">
             <label for="title">Title:</label>
             <input id="title" type="text" name="title" value="">
 
             <label for="body">Content:</label>
             <textarea name="body" id="body" cols="30" rows="10"></textarea>
 
-            <button type="submit" name="submit">done</button>
+            <button type="submit" name="submit">Submit</button>
             <a class="dashboard-link" href="index.php">Back to Dashboard</a>
 
         </form>

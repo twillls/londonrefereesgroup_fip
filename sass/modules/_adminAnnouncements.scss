@@ -6,12 +6,14 @@
         color: $offblack;
     }
 
+    span {
+        font-size: 1rem;
+        display: block;
+    }
+
     p{
         margin: 1vh 1vw;
-        span {
-            font-size: 0.9rem;
-            display: block;
-        }
+        
     }
 
     
