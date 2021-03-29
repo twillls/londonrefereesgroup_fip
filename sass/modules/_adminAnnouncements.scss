@@ -1,0 +1,18 @@
+.announcement-wrapper{
+    margin: 2vh 4vw;
+
+    h2 {
+        font-size: 1.2rem;
+        color: $offblack;
+    }
+
+    p{
+        margin: 1vh 1vw;
+        span {
+            font-size: 0.9rem;
+            display: block;
+        }
+    }
+
+    
+}

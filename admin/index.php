@@ -38,19 +38,21 @@ $getAnnouncements = getAllAnnouncements();
     <title>London Referees Group - Admin Dashboard</title>
 </head>
 <body>
-<main id="app">
+<main>
     <?php include "../public/templates/header.php"; ?>
     
     <section>
         <h1 class="hidden">Announcements</h1>
-        <h2 class="admin-content-title">Announcements</h2>
+        <h2 class="admin-content-title">Dashboard Announcements</h2>
 
         <?php foreach ($getAnnouncements as $announcement):?>
             <div class="announcement-wrapper">
                 <h2><?php echo $announcement['announcement_title'];?></h2>
                 <p>
                     <?php echo $announcement['announcement_body'];?>
+                    <span><?php echo $announcement['announcement_date'];?></span>
                 </p>
+                
             </div>
         <?php endforeach;?>
 
