@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
 
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     button {
         background: none;
@@ -11,6 +11,8 @@
         color: black;
 
         font-size: 12px;
+
+        margin: 5%;
 
         width: 15%;
         a {
@@ -21,6 +23,8 @@
 
     .admin-drop-nav{
         position: absolute;
+        left: 0;
+        top: 0;
 
         ul {
             background-color: white;

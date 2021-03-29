@@ -33,10 +33,14 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit User</title>
+
+    <link rel="stylesheet" href="../public/css/main.css">
+
+    <title>Account Settings</title>
 </head>
 <body>
-<h2>Edit User</h2>
+<?php include "../public/templates/header.php"; ?>
+<h2>Account Settings</h2>
 
 <?php echo !empty($message)?$message:'';?>
 <?php if (!empty($current_user)): ?> 
@@ -63,7 +67,7 @@ if(isset($_POST['submit'])){
 
             <!-- This dropdown should only be available for user level admin -->
             <?php if(isCurrentUserAdminAbove()):?>
-                <label for="user_level">User Level</label>
+                <label for="user_level">Membership</label>
                 <select name="user_level" id="user_level"> 
 
                     <?php $user_level_map = getUserLevelMap();
@@ -76,11 +80,12 @@ if(isset($_POST['submit'])){
                 <br><br>
             <?php endif;?>
 
-            <button type="submit" name="submit">Update User</button>
+            <button type="submit" name="submit">Update Account</button>
+            <a class="dashboard-link" href="index.php">Back to Dashboard</a>
         <?php endwhile;?>
         
     </form>
 <?php endif;?>
-    
+<script src="../public/js/main-admin.js"></script>
 </body>
 </html>

@@ -7,9 +7,11 @@
     <nav class="admin-drop-nav hidden">
         <ul>
             <li><a href="index.php">Home</a></li>
+            <li><a href="admin_addAnnouncement.php">Add Announcement</a></li>
             <li><a href="admin_createuser.php">Create User</a></li>
             <li><a href="admin_editallusers.php">Edit All Users</a></li>
             <li><a href="admin_deleteuser.php">Delete User</a></li>
+            <li><a href="admin_edituser.php">Account Settings</a></li>
 
             <li><button class="admin-drop-close">close</button></li>
             <!-- <li><a href="admin_edituser.php">Edit User</a></li> --> <!-- Edit User page is not needed as account details are to be updated on index -->
