@@ -1,0 +1,41 @@
+.lightbox {
+    display:none;
+    width:100%;
+    height:100%;
+    background-color:rgba(17, 17, 17, 0.7);
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:999999;
+    transition:$transition;
+
+    .lb-close {
+        position:absolute;
+        top:4vh;
+        right:4vh;
+        i {
+            color:$offwhite;
+            cursor:pointer;
+            font-size:$desktop-subhead-size;
+            transition:$transition;
+        }
+
+        i:hover {
+            color:$accent-color;
+        }
+    }
+    .lb-contents {     
+        margin:auto;
+        height:100%;
+        width:100%;
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        align-items:center;
+
+        .lb-image {
+            height:auto;
+            width:auto;
+        }
+    }
+}
