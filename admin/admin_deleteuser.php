@@ -31,45 +31,46 @@ if(!$users){
 
     <link rel="stylesheet" href="../public/css/main.css">
 
-    <title>Delete User</title>
+    <title>Delete Users</title>
 </head>
 <body>
-    <?php include "../public/templates/header.php"; ?>
+    <main>
+        <?php include "../public/templates/header.php"; ?>
 
-    <h2 class="admin-content-title">Delete User</h2>
+        <h2 class="admin-content-title">Delete Users</h2>
 
-    <?php echo !empty($message)?$message:'';?>
+        <?php echo !empty($message)?$message:'';?>
 
-
-    <section class="account-info-form">
-        <table>
-            <thead>
-                <tr>
-                    <th>User ID</th>
-                    <th>User Name</th>
-                    <th>User Email</th>
-                    <th>Delete</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <?php while($user = $users->fetch(PDO::FETCH_ASSOC)): ?>
+        <section class="account-info-form">
+            <table>
+                <thead>
                     <tr>
-                        <td><?php echo $user['user_id'];?></td>
-                        <td><?php echo $user['user_name'];?></td>
-                        <td><?php echo $user['user_email'];?></td>
-                        <td>
-                            <a href="admin_deleteuser.php?id=<?php echo $user['user_id'];?>">Delete</a>
-                        </td>
-
+                        <th>User ID</th>
+                        <th>User Name</th>
+                        <th>User Email</th>
+                        <th>Delete</th>
                     </tr>
-                <?php endwhile;?>
-            </tbody>
-        </table>
+                </thead>
 
-        <a class="dashboard-link" href="index.php">Back to Dashboard</a>
+                <tbody>
+                    <?php while($user = $users->fetch(PDO::FETCH_ASSOC)): ?>
+                        <tr>
+                            <td><?php echo $user['user_id'];?></td>
+                            <td><?php echo $user['user_name'];?></td>
+                            <td><?php echo $user['user_email'];?></td>
+                            <td>
+                                <a href="admin_deleteuser.php?id=<?php echo $user['user_id'];?>">Delete</a>
+                            </td>
 
-    </section>
+                        </tr>
+                    <?php endwhile;?>
+                </tbody>
+            </table>
+
+            <a class="dashboard-link" href="index.php">Back to Dashboard</a>
+
+        </section>
+    </main>
     <script src="../public/js/main-admin.js"></script>
 
 

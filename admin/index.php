@@ -24,6 +24,8 @@ if(isset($_POST['submit'])){
     $message = editUser($data);
 }
 
+$getAnnouncements = getAllAnnouncements();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,60 +38,22 @@ if(isset($_POST['submit'])){
     <title>London Referees Group - Admin Dashboard</title>
 </head>
 <body>
-<main id="app">
+<main>
     <?php include "../public/templates/header.php"; ?>
     
     <section>
-        <h1 class="hidden">Account Information - Update</h1>
-        <h2 class="dashboard-title">Admin Dashboard - <?php echo $_SESSION['user_name'];?></h2>
-        <h2 class="admin-content-title">Account Info</h2>
+        <h1 class="hidden">Announcements</h1>
+        <h2 class="admin-content-title">Dashboard Announcements</h2>
 
-        <?php if (!empty($current_user)): ?>
+        <?php foreach ($getAnnouncements as $announcement):?>
+            <div class="announcement-wrapper">
+                <h2><?php echo $announcement['announcement_title'];?></h2>
+                <span><?php echo $announcement['announcement_date'];?></span>
+                <p><?php echo $announcement['announcement_body'];?></p>
+            </div>
+        <?php endforeach;?>
 
-            <form class="account-info-form" action="index.php" method="POST">
-            <!-- Use POST - do not show sensitive information in URL -->
-            <?php while($user_info = $current_user->fetch(PDO::FETCH_ASSOC)):?>
-                <label for="first_name">First Name</label> 
-                <input id="first_name" type="text" name="fname" value="<?php echo $user_info['user_fname']; ?>">
-
-                <br><br>
-
-                <label for="username">Username</label> 
-                <input id="username" type="text" name="username" value="<?php echo $user_info['user_name']; ?>">
-                <br><br>
-
-                <label for="password">Password</label> 
-                <input id="password" type="text" name="password" value="<?php echo $user_info['user_pass']; ?>">
-                <!-- change type="text" to type="password" for production to hide password when typed - better UX -->
-                <br><br>
-
-                <label for="email">Email</label> 
-                <input id="email" type="email" name="email" value="<?php echo $user_info['user_email']; ?>">
-                <br><br>
-
-                <!-- This dropdown should only be available for user level admin -->
-                <?php if(isCurrentUserAdminAbove()):?>
-                    <label for="user_level">User Level</label>
-                    <select name="user_level" id="user_level"> 
-
-                    <?php $user_level_map = getUserLevelMap();
-                        foreach($user_level_map as $val => $label):?>
-                        <option value="<?php echo $val; ?>" <?php echo $val===(int)$user_info['user_level']?'selected':'';?> ><?php echo $label;?>
-                        </option>
-                    <?php endforeach;?>
-
-                    </select>
-
-                <?php endif;?>
-
-                <br><br>
-                
-                <button type="submit" name="submit">Update User</button>
-            
-            <?php endwhile;?>
-    
-        </form>
-        <?php endif;?>
+        
     </section>
     </main>
     <script src="../public/js/main-admin.js"></script>

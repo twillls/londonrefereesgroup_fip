@@ -1,0 +1,23 @@
+.account-info-form {
+    margin: 3vh 3vw;
+
+    label {
+        font-size: 1.2rem;
+        width: 25vw;
+        display: block;
+    }
+
+    input {
+        width: 50vw;
+    }
+
+    select, textarea { 
+        width: 50vw;
+        display: block;
+    }
+
+    button {
+        display: inline-block;
+    }
+
+}

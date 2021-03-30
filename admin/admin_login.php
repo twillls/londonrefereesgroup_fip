@@ -33,7 +33,7 @@ if(isset($_POST['submit'])){
 <body>
 
 <?php echo !empty($message)?$message:'';?>
-    <div class="logo-container">
+    <div class="login-logo-container">
         <img class="admin-logo" src="../public/images/logo.png" alt="London Referees Group">
     </div>
     

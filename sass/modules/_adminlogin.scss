@@ -1,12 +1,12 @@
-.logo-container{
-    margin: 0 15%;
+.login-logo-container{
+    margin: 0 25%;
 
     a { pointer-events: all;}
 
     .admin-logo {
-        background-color: black;
-        margin: 0 auto;
-        width: 100%;        
+        margin: 0 25%;
+        background-color: $accent-color;
+        width: 50%;      
     }
 }
 

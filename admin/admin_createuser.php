@@ -26,50 +26,47 @@ if(isset($_POST['submit'])){
 
     <link rel="stylesheet" href="../public/css/main.css">
 
-    <title>Create A New User</title>
+    <title>Create A User</title>
 </head>
 <body>
-    <?php include "../public/templates/header.php"; ?>
+    <main>
+        <?php include "../public/templates/header.php"; ?>
 
-    <h2 class="admin-content-title">Create A New User</h2>
-
-
-    <?php echo !empty($message)?$message:'';?>
-    <form class="account-info-form" action="admin_createuser.php" method="POST">
-    <!-- Use POST - do not show sensitive information in URL -->
-        <label for="first_name">First Name</label> 
-        <input id="first_name" type="text" name="fname" value="">
-        <br><br>
-
-        <label for="username">Username</label> 
-        <input id="username" type="text" name="username" value="">
-        <br><br>
-
-        <label for="password">Password</label> 
-        <input id="password" type="text" name="password" value="">
-        <!-- change type="text" to type="password" for production to hide password when typed - better UX -->
-        <br><br>
-
-        <label for="email">Email</label> 
-        <input id="email" type="email" name="email" value="">
-        <br><br>
+        <h2 class="admin-content-title">Create A User</h2>
 
 
-        <label for="user_level">User Level</label>
-        <select name="user_level" id="user_level"> 
+        <?php echo !empty($message)?$message:'';?>
+        <form class="account-info-form" action="admin_createuser.php" method="POST">
+        <!-- Use POST - do not show sensitive information in URL -->
+            <label for="first_name">First Name</label> 
+            <input id="first_name" type="text" name="fname" value="">
 
-            <?php $user_level_map = getUserLevelMap();
-            foreach($user_level_map as $val => $label):?>
-                <option value="<?php echo $val;?>"><?php echo $label;?></option>
-            <?php endforeach;?>
-            
-        </select>
-        <br><br>
+            <label for="username">Username</label> 
+            <input id="username" type="text" name="username" value="">
 
-        <button type="submit" name="submit">Create User</button>
-        <a class="dashboard-link" href="index.php">Back to Dashboard</a>
+            <label for="password">Password</label> 
+            <input id="password" type="text" name="password" value="">
+            <!-- change type="text" to type="password" for production to hide password when typed - better UX -->
 
-    </form>
+            <label for="email">Email</label> 
+            <input id="email" type="email" name="email" value="">
+
+
+            <label for="user_level">User Level</label>
+            <select name="user_level" id="user_level"> 
+
+                <?php $user_level_map = getUserLevelMap();
+                foreach($user_level_map as $val => $label):?>
+                    <option value="<?php echo $val;?>"><?php echo $label;?></option>
+                <?php endforeach;?>
+                
+            </select>
+
+            <button type="submit" name="submit">Create User</button>
+            <a class="dashboard-link" href="index.php">Back to Dashboard</a>
+
+        </form>
+    </main>
     <script src="../public/js/main-admin.js"></script>
 
 </body>

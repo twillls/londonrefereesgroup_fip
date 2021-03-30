@@ -5,9 +5,9 @@
 function getUserLevelMap()
 {
     return array(
-        '0'=>'Web Editor',
-        '1'=>'Web Admin',
-        '2'=>'Super Admin',
+        '0'=>'Parent',
+        '1'=>'Official',
+        '2'=>'Admin',
     );
 }
 
@@ -196,4 +196,18 @@ function isUsernameExists($username)
     );
 
     return !$user_exists_result || $user_exists_set->fetchColumn()>0;
+}
+
+function getAllAnnouncements()
+{
+    $pdo = Database::getInstance()->getConnection();
+    $queryAll = "SELECT * FROM tbl_announcements ORDER BY announcement_date DESC";
+    $runAll = $pdo->query($queryAll);
+    $announcements = $runAll->fetchAll(PDO::FETCH_ASSOC);
+
+    if($announcements){
+        return $announcements;
+    } else {
+        return 'There was an issue accessing annoucements';
+    }
 }
