@@ -35,7 +35,7 @@ export default {
                 <div class="sched-bottom">
                 <p class="sched-text">London Referees Group is proud to work with Horizon Web Ref to bring you a streamlined scheduling platform.</p>
                     <h3>HORIZON WEB REF TUTORIAL (VIDEO)</h3>
-                    <div class="tutorial">
+                    <div class="tutorial"><img src="../images/horizon-schedule.png">
                     </div>
                     <p>Visit Horizon Web <a href="/" class="register-link">here</a>.</p>
                 </div>
