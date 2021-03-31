@@ -16,40 +16,40 @@ export default {
         <div class="dropdown" @mouseleave="closeDropdown" v-show="ddOut">
             <div class="dd-box" v-for="sublink in ddlist" :key="sublink.name" 
             :name="sublink.name" @click="setView">
-                <a class="dd-sublink">{{sublink.text}}</a>
+                <a class="dd-sublink" :name="sublink.name">{{sublink.text}}</a>
             </div>
         </div>
         </transition>
             <div @mouseover="openDropdown" @click="setView" name="about" class="nav-box">
-                <a class="nav-link">
+                <a class="nav-link" name="about" >
                     ABOUT US
                 </a>
             </div>
             <div  @mouseover="openDropdown" @click="setView" name="services" class="nav-box">
-                <a class="nav-link">
+                <a class="nav-link" name="services">
                     SERVICES
                 </a>
             </div>
             <div  @mouseover="openDropdown" @click="setView" class="nav-box" name="members">
-                <a class="nav-link">
+                <a class="nav-link" name="members">
                     MEMBERSHIP
                 </a>
             </div>
             <div @click="setView" name="landing" class="nav-logo">
-                <img name="landing" src="images/logo.png">
+                <img name="landing" src="images/logo.png" name="landing" >
             </div>
             <div  @mouseover="openDropdown" @click="setView" name="jr" class="nav-box">
-                <a class="nav-link">
+                <a class="nav-link" name="jr">
                     JUNIORS
                 </a>
             </div>
             <div  @mouseover="openDropdown" class="nav-box" @click="setView" name="edu">
-                <a class="nav-link">
+                <a class="nav-link" name="edu">
                     EDUCATION
                 </a>
             </div>
             <div  @mouseover="openDropdown" class="nav-box" @click="setView" name="booking">
-                <a class="nav-link book">
+                <a class="nav-link book"  name="booking">
                     BOOKING
                 </a>
             </div>

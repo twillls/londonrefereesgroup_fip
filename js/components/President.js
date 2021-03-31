@@ -11,7 +11,7 @@ export default {
     template: 
     ` <div id="president">
         <div class="left">
-            <img src="../images/president.png">
+            <img src="../images/president.jpg">
         </div>
         <div class="right">
             <div class="president-text">
