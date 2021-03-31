@@ -18,7 +18,7 @@ export default {
             <p @click="setView"name="about" class="biglink">About Us</p>
             <p @click="setView"name="story" class="smalllink">Our Story</p>
             <p @click="setView"name="partners" class="smalllink">Our Partners</p>
-            <p @click="setView"name="president" class="smalllink">A Message from the President</p>
+            <p @click="setView"name="message" class="smalllink">A Message from the President</p>
             <p @click="setView"name="contact" class="smalllink">Contact Us</p>
         </div>
         <div class="column">
@@ -63,7 +63,8 @@ export default {
 
     methods: {
         setView(e) {
-            let newView = e.target.name;
+            debugger;
+            let newView = e.target.getAttribute("name");
             this.$emit("setview", newView);
         }
     }

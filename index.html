@@ -26,18 +26,23 @@
             <div class="menu-button">
                 <i @click="toggleNav" class="fas fa-bars"></i>
             </div>
-            <navbar @setview="updateView"></navbar>
+            <transition name="fade" mode="out-in" appear>
+                <navbar @setview="updateView"></navbar>
+            </transition>
         </section>
 
         <!--PAGE CONTENTS (DYNAMIC VUE COMPONENT)-->
 
         <section id="contents">
             <!--vue component here-->
+            <transition name="fade" mode="out-in" appear>
                 <component :is="setView" @setview="updateView" @lbcontents="lightboxContents"></component>
-           
+            </transition>
         </section>
         
-        <foot key="footer" @setview="updateView"></foot>
+        <transition name="fade" mode="out-in" appear>
+            <foot key="footer" @setview="updateView"></foot>
+        </transition>
     </main>
 
 
