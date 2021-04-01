@@ -26,7 +26,7 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 
     <title>London Referees Group - Login</title>
 </head>
@@ -34,7 +34,7 @@ if(isset($_POST['submit'])){
 
 <?php echo !empty($message)?$message:'';?>
     <div class="login-logo-container">
-        <img class="admin-logo" src="../public/images/logo.png" alt="London Referees Group">
+        <img class="admin-logo" src="../images/logo.png" alt="London Referees Group">
     </div>
     
     <div class="admin-container">
