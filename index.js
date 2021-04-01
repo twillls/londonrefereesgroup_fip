@@ -1,3 +1,6 @@
+// solution adapted from: https://stackoverflow.com/questions/50195362/vue-history-mode-and-express-server-getting-404-error
+// and vue docs about history mode
+
 const express = require('express');
 const path = require('path');
 const history = require('connect-history-api-fallback');
