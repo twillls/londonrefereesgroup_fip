@@ -40,6 +40,7 @@
     padding-top:10vh;
     margin-left:-60vw;
     animation: slide 0.3s 0s 1 ease-in forwards;
+
 }
 
 .showing {
@@ -55,7 +56,16 @@
     text-align:left;
     height:10%;
     background-color:$accent-color;
+
+    
+    router-link {
+        height:100%;
+        width:100%;
+        background-color:blue;
+    }
 }
+
+
 .nav-link { 
     font-size:4vw;
     font-family:"SportsNight";
@@ -109,10 +119,10 @@
 /* desktop  */
   
   @media screen and (min-width: $breakpoint-desktop) {
-   
+
     #main-nav {
-        width:100vw;
-        height:16vh;
+        height:0%;
+        width:0%;
     }
        
     .menu-button {
@@ -121,13 +131,17 @@
 
     .top-nav {
         width:100%;
-        height:100%;
+        height:16vh;
         padding:0;
         display:flex;
         flex-direction:row;
         align-items:center;
         justify-content:space-between;
         justify-items:center;
+        animation: 0;
+        margin-left:0;
+        position:fixed;
+        z-index:999999;
     }
  
     .nav-box {
@@ -183,21 +197,26 @@
         width:13.7vw;
         border-radius:$border-radius;
     
-        .dd-box {
+        .dd-box-wrap {
             height:10vh;
             width:100%;
-            display:flex;
-            align-items:center;
-            transition:$transition;
-            cursor:pointer;
-            .dd-sublink {
-                padding-left:1vw;
-                font-family:$main-font;
-                color:$offwhite;
-                font-size:1vw;
-                pointer-events: none;
+            .dd-box {
+                height:100%;
+                width:100%;
+                display:flex;
+                align-items:center;
+                transition:$transition;
+                cursor:pointer;
+                .dd-sublink {
+                    padding-left:1vw;
+                    font-family:$main-font;
+                    color:$offwhite;
+                    font-size:1vw;
+                    pointer-events: none;
+                }
             }
         }
+       
 
         .dd-box:hover {
             background-color:$darkaccent-color;

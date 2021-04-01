@@ -19,34 +19,69 @@ import Booking from "./components/Booking.js";
 import Footer from "./components/Footer.js";
 import Lightbox from "./components/Lightbox.js";
 
-
 /************** (FRONT-END) TO-DO ***************/
 /* UPDATING COMPONENTS WITH DYNAMIC DATA AS NEEDED: see individual commponents' js file for more specific notes */
 /* MEMBERS ACCOUNT/PROFILE PAGE?? - check if this is needed */
 /* LOGOUT BUTTON (top right corner?) - OR "profile" button that includes logout option on dropdown */
 /* CONNECTION FROM FRONT-END TO BACK-END */
 /* MOBILE & TABLET RESPONSIVE STYLES FOR ALL COMPONENTS(!!!!!!!) */
+Vue.use(VueRouter);
+const routes = [
+    { path:'/', component: Landing },
+    { path: '/about', component: About},
+    { path:'/story', component: Story },
+    { path:'/partners', component: Partners },
+    { path:'/president', component: President },
+    { path:'/contact', component: Contact },
+    { path:'/services', component: Services },
+    { path:'/membership', component: Membership },
+    { path:'/structure', component: Structure },
+    { path:'/certification', component: Certification },
+    { path:'/skills', component: Skills },
+    { path:'/scheduling', component: Scheduling },
+    { path:'/gallery', component: Gallery },
+    { path:'/join', component: Join },
+    { path:'/juniors', component: Juniors },
+    { path:'/education', component: Education },
+    { path:'/booking', component: Booking }
+]
+
+
+/* stuff that makes routing work (hopefully) */
+
+const router = new VueRouter({
+    mode: 'history',
+    routes
+});
+
 
 (() => {
 
-    new Vue({
 
+   
+const app = new Vue({
         el: "#app",
+        router,
 
         data: {
             currentView: "",
-            newView: "landing"
+            newView: "landing",
+            currentRoute: window.location.pathname
          },
 
             mounted: function() {   
-            console.log("Vue is mounted, trying a fetch for the initial data");
+            console.log(window.screen.width);
         },
 
         computed: {
             setView: function() {
-                this.currentView = this.newView;
-                return this.currentView;
+               // return router[this.currentRoute] || NotFound
+                //this.currentView = this.newView;
+               // return this.currentView;
             },
+            ViewComponent () {
+                return routes[this.currentRoute] || NotFound
+            }
         },
 
         updated: function() {
@@ -102,7 +137,7 @@ import Lightbox from "./components/Lightbox.js";
             "edu": Education,
             "booking": Booking,
             "foot": Footer,
-            "lightbox": Lightbox
-        }
-    })
+            "lightbox": Lightbox,
+        },
+    }).$mount('#app');
 })();
