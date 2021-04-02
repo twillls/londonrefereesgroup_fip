@@ -29,13 +29,13 @@ if(!$users){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 
     <title>Delete Users</title>
 </head>
 <body>
     <main>
-        <?php include "../public/templates/header.php"; ?>
+        <?php include "../templates/header.php"; ?>
 
         <h2 class="admin-content-title">Delete Users</h2>
 
@@ -70,8 +70,10 @@ if(!$users){
             <a class="dashboard-link" href="index.php">Back to Dashboard</a>
 
         </section>
+
+        <?php include "../templates/footer.php"; ?>
     </main>
-    <script src="../public/js/main-admin.js"></script>
+    <?php include "../templates/scripts.php"; ?>
 
 
 </body>

@@ -33,13 +33,13 @@ $getAnnouncements = getAllAnnouncements();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 
     <title>London Referees Group - Admin Dashboard</title>
 </head>
 <body>
 <main>
-    <?php include "../public/templates/header.php"; ?>
+    <?php include "../templates/header.php"; ?>
     
     <section>
         <h1 class="hidden">Announcements</h1>
@@ -55,8 +55,12 @@ $getAnnouncements = getAllAnnouncements();
 
         
     </section>
+
+    <?php include "../templates/footer.php"; ?>
+
     </main>
-    <script src="../public/js/main-admin.js"></script>
+
+    <?php include "../templates/scripts.php"; ?>
 
 </body>
 </html>

@@ -24,13 +24,13 @@ if(isset($_POST['submit'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 
     <title>Create A User</title>
 </head>
 <body>
     <main>
-        <?php include "../public/templates/header.php"; ?>
+        <?php include "../templates/header.php"; ?>
 
         <h2 class="admin-content-title">Create A User</h2>
 
@@ -66,8 +66,10 @@ if(isset($_POST['submit'])){
             <a class="dashboard-link" href="index.php">Back to Dashboard</a>
 
         </form>
+        <?php include "../templates/footer.php"; ?>
+
     </main>
-    <script src="../public/js/main-admin.js"></script>
+    <?php include "../templates/scripts.php"; ?>
 
 </body>
 </html>
