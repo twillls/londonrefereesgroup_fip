@@ -20,6 +20,7 @@ export default {
             <div class="dd-box" :href="href" @click="navigate">
                 <a class="dd-sublink" :name="sublink.name" :href="href" @click="navigate">{{sublink.text}}</a>
             </div>
+            </router-link>
             </div>
         </div>
         </transition>

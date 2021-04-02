@@ -37,17 +37,17 @@ export default {
                     <h2 class="members-head">PARTNER CERTIFICATION CLINICS</h2>
                 </div>
                 <div class="partner-bottom">
-                    <div class="partner">
+                    <div class="partner1">
                         <h3 class="name">PARTNER NAME</h3>
                         <p class="desc">Short description of available certifications.</p>
                         <a class="visit" href="/">VISIT WEBSITE</a>
                     </div>
-                    <div class="partner-left">
+                    <div class="partner2">
                         <h3 class="name">PARTNER NAME</h3>
                         <p class="desc">Short description of available certifications.</p>
                         <a class="visit" href="/">VISIT WEBSITE</a>
                     </div>
-                    <div class="partner">
+                    <div class="partner3">
                         <h3 class="name">PARTNER NAME</h3>
                         <p class="desc">Short description of available certifications.</p>
                         <a class="visit" href="/">VISIT WEBSITE</a>

@@ -372,7 +372,8 @@
         margin:0;
         top:0;
         background-image:url('../images/story-edit.jpg');
-        background-position:right;
+        background-position:center;
+        background-position-y:-300px;
         margin-top:$desktop-headfoot-height;
         margin-bottom:$desktop-headfoot-height;
     }
@@ -398,11 +399,11 @@
         }
         .testimonials {
             padding-left:$desktop-left-pad;
+            margin-right:$desktop-left-pad;
             height:50%;
             display:flex;
             flex-direction:column;
             justify-content:center;
-            width:100%;
             .story-head4 {
                 text-align:center;
                 width:100%;
@@ -470,6 +471,7 @@
                 margin-top:4vh;
                 display:flex;
                 flex-direction:row;
+                flex-wrap:wrap;
                 .partner-name {
                     font-size:$desktop-subhead-size;
                     color:$offblack;
@@ -522,24 +524,28 @@
         padding-top:$desktop-headfoot-height;
         margin-bottom:$desktop-headfoot-height;
         .row {
-            background-color:blue;
+            background-color:$offblack;
             height:50%;
             width:100%;
             display:flex;
             flex-direction:row;
         }
-
-        .row:first-child {
-            background-color:black;
-        }
         .partner {
             height:100%;
             width:33.33%;
             background-color:red;
+            display:flex;
+            background-position:center;
+            background-size:250%;
+            transition:$transition;
+            opacity:1;
+            background-repeat:none;
+            cursor:pointer;
         }
 
         .partner:hover {
-            background-color:black;
+            background-size:200%;
+            opacity:0.8;
         }
     }
 }
@@ -1116,16 +1122,22 @@
                         color:$accent-color;
                     }
                 }
-            .partner {
+            .partner1 {
                 text-align:right;
-                background-color:black;
+                background-image:url('../images/cert1-edit.jpg');
             }
+            .partner3 {
+                text-align:right;
+                background-image:url('../images/cert2-edit.jpg');
+}
 
-            .partner-left {
+            .partner2 {
                 width:100%;
                 height:250px;
                 text-align:left;
-                background-color:red;
+                background-image:url('../images/cert3-edit.jpg');
+                background-position-y:-100px;
+
             }
         }
 
@@ -1148,7 +1160,8 @@
             flex-direction:row;
             height:80%;
             .workshop-left {
-                background-color:black;
+                background-image:url('../images/workshop1-edit.jpg');
+                background-position:center;
                 width:50%;
                 height:100%;
                 color:$offwhite;
@@ -1182,7 +1195,9 @@
                 }
             }
         .workshop-right {
-            background-color:red;
+            background-image:url('../images/workshop2-edit.jpg');
+            background-position-y:-250px;
+            background-position-x:-600px;
             width:50%;
             height:100%;
             color:$offwhite;
@@ -1249,6 +1264,10 @@
                 width:500px;
                 background-color:black;
                 margin-bottom:2vh;
+
+                img {
+                    width:100%;
+                }
             }
             h3 {
                 font-size:$desktop-midhead-size;
@@ -1295,8 +1314,9 @@
             .entry {
                 height:100%;
                 width:50%;
-                background-image:url(../images/gallery1-edit.jpg);
                 position:relative;
+                background-position:center;
+                background-size:cover;
                 z-index:999;
 
                 .entry-info {
