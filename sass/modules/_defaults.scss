@@ -13,6 +13,7 @@ body {
     color: $main-text-color;
     font-family: $main-font;
     font-size: $mobile-font-size;
+    cursor:auto;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -85,7 +86,6 @@ button:hover {
   @media screen and (min-width: $breakpoint-desktop) {
     body {
         font-size: $desktop-font-size;
-        max-width:1920px;
     }
 
     #app {
@@ -97,3 +97,8 @@ button:hover {
     }
   }
 
+
+ .routerlink {
+    text-decoration:underline;
+    cursor:pointer;
+  }

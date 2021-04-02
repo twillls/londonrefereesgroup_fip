@@ -11,41 +11,50 @@
     <link rel="stylesheet" href="css/regular.css"type="text/css">
     <link rel="stylesheet" href="css/fontawesome.css"type="text/css">
     <link rel="stylesheet" href="css/font-awesome-animation.css"type="text/css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@3.5.1/dist/vue-router.js"></script>
     <title>London Referrees Group</title>
 </head>
 <body>
 
-    <!--NAVIGATION TOP BAR-->
+
     <!--MAIN PAGE-->
 
     <main id="app">
+    
         <!--lightbox contents will go here-->
             <lightbox></lightbox>
-        <section key="nav" id="main-nav">
-            <div class="menu-button">
-                <i @click="toggleNav" class="fas fa-bars"></i>
-            </div>
-            <transition name="fade" mode="out-in" appear>
-                <navbar @setview="updateView"></navbar>
-            </transition>
-        </section>
-
-        <!--PAGE CONTENTS (DYNAMIC VUE COMPONENT)-->
-
+            <!--PAGE CONTENTS (DYNAMIC VUE COMPONENT)-->
+            <section key="nav" id="main-nav">
+                <div class="menu-button">
+                    <i @click="toggleNav" class="fas fa-bars"></i>
+                </div>
+                <transition name="fade" mode="out-in" appear>
+                    <navbar @setview="updateView"></navbar>
+                </transition>
+            </section> 
         <section id="contents">
             <!--vue component here-->
             <transition name="fade" mode="out-in" appear>
-                <component :is="setView" @setview="updateView" @lbcontents="lightboxContents"></component>
+                <router-view :key="$route.path" @lbcontents="lightboxContents"></router-view>
             </transition>
+            <!-- <transition name="fade" mode="out-in" appear>
+                 <component :is="setView" @setview="updateView" @lbcontents="lightboxContents"></component>
+            </transition> -->
         </section>
-        
-        <transition name="fade" mode="out-in" appear>
-            <foot key="footer" @setview="updateView"></foot>
-        </transition>
+
+            <transition name="fade" mode="out-in" appear>
+                <foot key="footer" @setview="updateView"></foot>
+            </transition>
+
+    
     </main>
 
-
     <script type="module" src="js/main.js"></script>
+
+    <script>document.addEventListener("click", function(e) {
+        console.log(e.target);
+    })
+        </script>
 </body>
 </html>
