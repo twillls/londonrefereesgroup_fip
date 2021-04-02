@@ -11,7 +11,7 @@ export default {
     },
 
     template: 
-    `<section id="main-footer">
+    `<secte id="main-footer">
     <div class="left">
         <div class="column">
             <router-link to="" v-slot="{href, route, navigate}" custom>
@@ -121,7 +121,7 @@ export default {
         </div>
     </div>
     <div class="copy">[COPYRIGHT]</div>
-</section>`,
+</secte>`,
 
     methods: {
         setView(e) {

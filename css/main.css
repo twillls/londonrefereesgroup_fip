@@ -49,8 +49,6 @@
 .lightbox .lb-contents .lb-image {
   height: auto;
   width: auto;
-  max-height: 95%;
-  max-width: fit-content;
 }
 
 /* mobile defaults first */
@@ -896,8 +894,7 @@ button:hover {
   margin: 0;
   top: 0;
   background-image: url("../images/story-edit.jpg");
-  background-position: center;
-  background-position-y: -300px;
+  background-position: right;
   margin-top: 16vh;
   margin-bottom: 16vh;
 }
@@ -927,11 +924,11 @@ button:hover {
 
 #story .right .testimonials {
   padding-left: 100px;
-  margin-right: 100px;
   height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 
 #story .right .testimonials .story-head4 {
@@ -1004,7 +1001,6 @@ button:hover {
   margin-top: 4vh;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
 #partners .left .partner-display .partner-info .partner-name {
@@ -1056,29 +1052,25 @@ button:hover {
 }
 
 #partners .right .row {
-  background-color: #111111;
+  background-color: blue;
   height: 50%;
   width: 100%;
   display: flex;
   flex-direction: row;
 }
 
+#partners .right .row:first-child {
+  background-color: black;
+}
+
 #partners .right .partner {
   height: 100%;
   width: 33.33%;
   background-color: red;
-  display: flex;
-  background-position: center;
-  background-size: 250%;
-  transition: 0.5s 0s cubic-bezier(0.075, 0.82, 0.165, 1);
-  opacity: 1;
-  background-repeat: none;
-  cursor: pointer;
 }
 
 #partners .right .partner:hover {
-  background-size: 200%;
-  opacity: 0.8;
+  background-color: black;
 }
 
 /* president styles */
@@ -1690,22 +1682,16 @@ button:hover {
   color: #bd2025;
 }
 
-#members .right .members-text .partner-bottom .partner1 {
+#members .right .members-text .partner-bottom .partner {
   text-align: right;
-  background-image: url("../images/cert1-edit.jpg");
+  background-color: black;
 }
 
-#members .right .members-text .partner-bottom .partner3 {
-  text-align: right;
-  background-image: url("../images/cert2-edit.jpg");
-}
-
-#members .right .members-text .partner-bottom .partner2 {
+#members .right .members-text .partner-bottom .partner-left {
   width: 100%;
   height: 250px;
   text-align: left;
-  background-image: url("../images/cert3-edit.jpg");
-  background-position-y: -100px;
+  background-color: red;
 }
 
 #members .right .members-text .skills-top {
@@ -1728,8 +1714,7 @@ button:hover {
 }
 
 #members .right .members-text .skills-bottom .workshop-left {
-  background-image: url("../images/workshop1-edit.jpg");
-  background-position: center;
+  background-color: black;
   width: 50%;
   height: 100%;
   color: #eaeff0;
@@ -1765,9 +1750,7 @@ button:hover {
 }
 
 #members .right .members-text .skills-bottom .workshop-right {
-  background-image: url("../images/workshop2-edit.jpg");
-  background-position-y: -250px;
-  background-position-x: -600px;
+  background-color: red;
   width: 50%;
   height: 100%;
   color: #eaeff0;
@@ -1836,10 +1819,6 @@ button:hover {
   margin-bottom: 2vh;
 }
 
-#members .right .members-text .sched-bottom .tutorial img {
-  width: 100%;
-}
-
 #members .right .members-text .sched-bottom h3 {
   font-size: 40px;
   color: #bd2025;
@@ -1888,9 +1867,8 @@ button:hover {
 #members .right .members-text .gallery-bottom .row .entry {
   height: 100%;
   width: 50%;
+  background-image: url(../images/gallery1-edit.jpg);
   position: relative;
-  background-position: center;
-  background-size: cover;
   z-index: 999;
 }
 

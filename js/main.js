@@ -31,7 +31,7 @@ const routes = [
     { path: '/about', component: About},
     { path:'/story', component: Story },
     { path:'/partners', component: Partners },
-    { path:'/message', component: President },
+    { path:'/president', component: President },
     { path:'/contact', component: Contact },
     { path:'/services', component: Services },
     { path:'/membership', component: Membership },
@@ -70,6 +70,7 @@ const app = new Vue({
          },
 
             mounted: function() {   
+            console.log(window.screen.width);
         },
 
         computed: {
@@ -108,7 +109,8 @@ const app = new Vue({
             },
 
             lightboxContents(contents) {
-                let contentsUrl = contents;
+                debugger;
+                let contentsUrl = `./images/${contents}.jpg`;
                 console.log(contentsUrl);
                 document.querySelector(".lb-image").src = contentsUrl;
             }

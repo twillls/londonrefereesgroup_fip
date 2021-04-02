@@ -20,7 +20,7 @@ export default {
 
     computed: {
         imageSource: function() {
-            let source = this.info.url;
+            let source = `../images/${this.info.url}.jpg`
             return source;
         }
     },

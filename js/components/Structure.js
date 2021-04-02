@@ -37,7 +37,7 @@ export default {
                 <div class="structure">
                     <div class="structure-left">
                         
-                        <div class="role-img"><img src="../images/role-edit.jpg"></div>
+                        <div class="role-img"></div>
                          <div>
                             <h4 class="title">ROLE EXAMPLE</h4>
                             <p class="name">Full Name</p>
@@ -46,7 +46,7 @@ export default {
                             duties & responsibilities of
                             this role.</p>
                         </div>
-                            <div class="role-img"><img src="../images/role-edit.jpg"></div>
+                            <div class="role-img"><img src=""></img></div>
                         <div>
                             <h4 class="title">ROLE EXAMPLE</h4>
                             <p class="name">Full Name</p>
@@ -68,7 +68,7 @@ export default {
                             duties & responsibilities of
                             this role.</p>
                         </div>
-                            <div class="role-img"><img src="../images/role-edit.jpg"></div>
+                            <div class="role-img"><img src=""></img></div>
                          <div>
                             <h4 class="title">ROLE EXAMPLE</h4>
                             <p class="name">Full Name</p>
@@ -77,7 +77,7 @@ export default {
                             duties & responsibilities of
                             this role.</p>
                         </div>
-                            <div class="role-img"<img src="../images/role-edit.jpg"></div>
+                            <div class="role-img"><img src=""></img></div>
                     </div>
                 </div>
             </div>
