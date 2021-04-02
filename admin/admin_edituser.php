@@ -1,4 +1,6 @@
 <?php
+// ********* THIS IS THE ACCOUNT SETTINGS PAGE *********
+
 require_once '../load.php';
 confirm_logged_in();
 
@@ -12,6 +14,7 @@ if(empty($current_user)){
 
 // Double check here that user level editor cannot UPgrade their own user level
 // They should only be able to downgrade
+
 if(isset($_POST['submit'])){
     $data = array(
         'fname'=>trim($_POST['fname']),
@@ -34,13 +37,13 @@ if(isset($_POST['submit'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 
     <title>Account Settings</title>
 </head>
 <body>
     <main>
-        <?php include "../public/templates/header.php"; ?>
+        <?php include "../templates/header.php"; ?>
         <h2 class="admin-content-title">Account Settings</h2>
 
         <?php echo !empty($message)?$message:'';?>
@@ -87,7 +90,9 @@ if(isset($_POST['submit'])){
                 
             </form>
         <?php endif;?>
+        <?php include "../templates/footer.php"; ?>
+
     </main>
-    <script src="../public/js/main-admin.js"></script>
+    <?php include "../templates/scripts.php"; ?>
 </body>
 </html>

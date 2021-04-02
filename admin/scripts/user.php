@@ -181,7 +181,12 @@ function editAllUsers($user_data)
 
 function isCurrentUserAdminAbove()
 {
-    return !empty($_SESSION['user_level']);
+    // return !empty($_SESSION['user_level']);
+    if($_SESSION['user_level'] !== "2"){
+        return false;
+    } else {
+        return true;
+    };
 }
 
 function isUsernameExists($username)

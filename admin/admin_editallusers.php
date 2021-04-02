@@ -25,13 +25,13 @@ if(isset($_POST['submit'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 
     <title>Edit All Users</title>
 </head>
 <body>
     <main>
-        <?php include "../public/templates/header.php"; ?>
+        <?php include "../templates/header.php"; ?>
 
         <h2 class="admin-content-title">Edit All Users</h2>
         <a id="edit-all-users-link" href="index.php">Back to Dashboard</a>
@@ -78,8 +78,10 @@ if(isset($_POST['submit'])){
         </div>
 
         <?php endforeach;?>
+        <?php include "../templates/footer.php"; ?>
+
     </main>
-    <script src="../public/js/main-admin.js"></script>
+    <?php include "../templates/scripts.php"; ?>
 
 </body>
 </html>
