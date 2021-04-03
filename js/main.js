@@ -108,8 +108,13 @@ const app = new Vue({
             },
 
             lightboxContents(contents) {
-                let contentsUrl = contents;
-                console.log(contentsUrl);
+                debugger;
+                var contentsUrl; 
+                    if(contents.includes("../images/")) {
+                        contentsUrl = contents;
+                    } else {
+                        contentsUrl = `../images/${contents}.jpg`;
+                    }
                 document.querySelector(".lb-image").src = contentsUrl;
             }
 

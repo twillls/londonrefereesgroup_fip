@@ -19,7 +19,9 @@ export default {
             <p class="intro">We are an organization of 225 hockey referees serving London and area. 
                 If you are currently looking for an organization to referee your hockey league,
                 our team would like the opportunity to assist.</p>
-            <button @click="setView" class="find">MEMBER LOGIN</button>
+            <router-link to="/membership">
+            <button class="find">MEMBER LOGIN</button>
+            </router-link>
         </div>
     </div>
     `,
