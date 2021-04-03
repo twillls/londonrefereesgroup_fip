@@ -23,7 +23,9 @@ export default {
                 </form>
                 <div class="bottom-text">
                     <p>Want to become a member?</p>
-                    <p>Apply <a href="/" class="apply-link">HERE</a>.</p>
+                    <router-link to="/join">
+                <p>Apply <a href="/" class="apply-link">HERE</a>.</p>
+                </router-link>
                 </div>
             </div>
         </div>
@@ -37,7 +39,7 @@ export default {
                     <h3>HORIZON WEB REF TUTORIAL (VIDEO)</h3>
                     <div class="tutorial"><img src="../images/horizon-schedule.png">
                     </div>
-                    <p>Visit Horizon Web <a href="/" class="register-link">here</a>.</p>
+                    <p>Visit Horizon Web <a href="https://www.horizonwebref.com/" class="register-link">here</a>.</p>
                 </div>
             </div>
         </div>

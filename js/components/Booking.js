@@ -19,7 +19,7 @@ export default {
                 </div>
             </div>
 
-            <div class="steps-container">
+            <div class="steps-container"  id="book">
                 <h2 class="intro-subhead">SUBHEADING HERE.</h2>
                 <p>Paragraph description/overview of what referees are available, how to
                 book one, rules, etc. Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -139,7 +139,7 @@ export default {
                     </div>
                 </div>
 
-                <div class="step" id="book">
+                <div class="step">
                     <div class="step-intro">
                         <h3 class="step-head">STEP 3: Fill out our booking form.</h3>
                         <p>Line here with details/instructions.</p>

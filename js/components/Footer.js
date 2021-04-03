@@ -14,7 +14,7 @@ export default {
     `<section id="main-footer">
     <div class="left">
         <div class="column">
-            <router-link to="" v-slot="{href, route, navigate}" custom>
+            <router-link to="/" v-slot="{href, route, navigate}" custom>
                 <p :href="href" @click="navigate" name="landing" class="biglink">Home</p></li>
             </router-link>
             <router-link to="/about" v-slot="{href, route, navigate}" custom>

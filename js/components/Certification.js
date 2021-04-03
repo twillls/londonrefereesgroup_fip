@@ -27,7 +27,9 @@ export default {
                 </form>
                 <div class="bottom-text">
                     <p>Want to become a member?</p>
-                    <p>Apply <a href="/" class="apply-link">HERE</a>.</p>
+                    <router-link to="/join">
+                <p>Apply <a href="/" class="apply-link">HERE</a>.</p>
+                </router-link>
                 </div>
             </div>
         </div>
