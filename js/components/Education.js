@@ -46,9 +46,7 @@ export default {
                 <div class="intro">
                     <h2 class="edu-head">WHAT IS A REFEREE?</h2>
                     <h4 class="edu-desc">Description of the role of the referree, maybe
-                    a brief summary of the history behind referees in hockey, etc.</h4>
-                    <h4 class="edu-desc">Description of the role of the referree, maybe
-                    a brief summary of the history behind referees in hockey, etc.</h4>
+                    a brief summary of the history behind referees in hockey, etc. This will look best as a paragraph without about 4 lines.</h4>
                 </div>
                 <div class="signals-container">
                     <div class="desc">

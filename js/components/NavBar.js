@@ -32,7 +32,7 @@ export default {
             </div>
         </router-link>
         <router-link to="/services" v-slot="{ href, route, navigate }" custom>
-            <div :href="href" @click="navigate" name="services" class="nav-box">
+            <div :href="href" @click="navigate" @mouseenter="closeDropdown" name="services" class="nav-box">
                 <a class="nav-link" name="about">
                     SERVICES
                     </a>
@@ -46,26 +46,26 @@ export default {
             </div>
             </router-link>
         <router-link to="/" v-slot="{ href, route, navigate }" custom>
-            <div :href="href" @click="navigate" name="landing" class="nav-logo">
+            <div :href="href" @click="navigate" name="landing"  @mouseenter="closeDropdown"  class="nav-logo">
                 <img name="landing" src="images/logo.png" >
             </div>
             </router-link>
         <router-link to="/juniors" v-slot="{ href, route, navigate }" custom>
-            <div :href="href" @click="navigate"  name="jr" class="nav-box">
+            <div :href="href" @click="navigate"  name="jr"  @mouseenter="closeDropdown" class="nav-box">
                 <a class="nav-link" name="about">
                     JUNIORS
                 </a>
             </div>
             </router-link>
         <router-link to="/education" v-slot="{ href, route, navigate }" custom>
-            <div :href="href" @click="navigate" class="nav-box" name="edu">
+            <div :href="href" @click="navigate" class="nav-box"  @mouseenter="closeDropdown"  name="edu">
                 <a class="nav-link" name="about">
                     EDUCATION
                     </a>
             </div>
             </router-link>
         <router-link to="/booking" v-slot="{ href, route, navigate }" custom>
-            <div :href="href" @click="navigate" class="nav-box" name="booking">
+            <div :href="href" @click="navigate" class="nav-box"  @mouseenter="closeDropdown"  name="booking">
                 <a class="nav-link" name="about">
                     BOOKING
                     </a>
@@ -100,7 +100,7 @@ export default {
                 ]
             }
             else if (thisLink == "members") {
-                dd.style.transform = "translateX(27.4vw)";
+                dd.style.transform = "translateX(27.8vw)";
                 thisList = [
                     { path: "/structure", name: "structure", text: "Committee Structure"},
                     { path: "/certification", name: "certification", text: "Partner Certification Clinics"},

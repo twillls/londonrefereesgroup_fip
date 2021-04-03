@@ -701,11 +701,10 @@
                     }
 
                     input[type=submit] {
-                        margin-left:10px;
-                        margin-right:10px;
+                        margin-left:40px;
+                        margin-right:40px;
                         margin-bottom:-10px;
                         width:100%;
-                        padding:1.5vh;
                         font-family:$main-font;
                         font-size:$desktop-subhead-size;
                         color:$accent-color;
@@ -1696,7 +1695,7 @@
         justify-content:center;
  
         .left {
-            width:60%;
+            width:50%;
             height:auto;
             display:flex;
             flex-direction:column;
@@ -1723,7 +1722,7 @@
             }
             .signals-container {
                 margin-left:$desktop-left-pad;
-                margin-top:4vh;
+                margin-top:6vh;
                 height:60%;
                 display:flex;
                 flex-direction:row;
@@ -1732,7 +1731,7 @@
                     display:flex;
                     flex-direction:column;
                     justify-content:space-evenly;
-                    width:30%;
+                    width:50%;
                     margin-right:2vw;
                     height:100%;
                     .desc-text {
@@ -1747,17 +1746,6 @@
                         .rules {
                             color:$main-text-color;
                             font-size:$desktop-small-size;
-                        }
-                    }
-
-
-                    .arrows {
-                        margin-top:4vh;
-                        text-align:center;
-                        .signal-arrow {
-                           font-size:$desktop-subhead-size;
-                           margin:2vh;
-                           cursor:pointer;
                         }
                     }
    
@@ -1776,7 +1764,6 @@
                             width:100%;
                             height:100%;
                             position:relative;
-                            background-color:black;
                            
                         }
                     
@@ -1840,7 +1827,9 @@
                             img {
                                 width:100%;
                                 height:100%;
-                                object-fit:cover
+                                object-fit:cover;
+                                border-radius:$border-radius 0px 0px $border-radius;
+
                             }
                         }
                     }
@@ -1857,18 +1846,32 @@
                             padding-bottom:8px;
                             padding-right:4px;
                             padding-left:4px;
-                            border:1px solid $offblack;
-                            background-color:$offwhite;
+                            border:1px solid $darkaccent-color;
+                            background-color:$accent-color;
+                            color:$offwhite;
                             cursor:pointer;
                             transition:$transition;
                             font-size:$desktop-smaller-size;
+                            background-clip:padding-box;
+                            
                         }
 
+
                         .signal-tab:hover {
-                            background-color:$accent-color;
-                            color:$offwhite;
+                            background-color:$offwhite;
+                            color:$offblack;
                         }
+                    }   
+                    .signal-nav-container::-webkit-scrollbar-track {
+                      background:$accent-color;        
+                      border-radius:0px $border-radius  $border-radius 0px;
                     }
+                    
+                    .signal-nav-container::-webkit-scrollbar-thumb {
+                        border:5px solid transparent;
+                      background-color:$offwhite;
+                    }
+                  
                     
                 }
             }
@@ -1913,7 +1916,7 @@
                 }
 
                 .ref-middle {
-                    width:50%;
+                    width:45%;
                     display:flex;
                     flex-direction:column;
                     justify-content:space-evenly;
@@ -1922,7 +1925,8 @@
                         width:100%;
                         height:100%;
                         margin:auto;
-                        background-image:url('../images/ref-drawing.png')
+                        background-image:url('../images/ref-drawing.png');
+                        background-repeat:none;
                     }
                 }
 
