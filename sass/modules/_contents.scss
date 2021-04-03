@@ -266,9 +266,9 @@
         padding:0;
         top:0;
         position:fixed;
-        opacity:0.3;
+        opacity:0.25;
         display:block;
-        font-size:10vw;
+        font-size:14vw;
         left:4vw;
         padding-top:130px;
         font-family:"SportsNight";
@@ -307,6 +307,9 @@
             padding:0;
             margin:0;
 
+        }
+        button {
+            padding:20px;
         }
     }
 
@@ -461,6 +464,7 @@
                 height:300px;
                 width:100%;
                 text-align:center;
+                padding-top:$desktop-top-pad;
                 img {
                     margin:auto;
                     height:100%;
@@ -471,6 +475,8 @@
                 margin-top:4vh;
                 display:flex;
                 flex-direction:row;
+                align-items:center;
+                justify-content:center;
                 flex-wrap:wrap;
                 .partner-name {
                     font-size:$desktop-subhead-size;
@@ -489,8 +495,9 @@
                 }
 
                 .visit-website {
-                    width:50%;
-                    text-align:center;
+                    width:35%;
+                    text-align:right;
+                    font-size:$desktop-small-size
                 }
             }
         }
@@ -1263,7 +1270,7 @@
                 height:300px;
                 width:500px;
                 background-color:black;
-                margin-bottom:2vh;
+                margin-bottom:6vh;
 
                 img {
                     width:100%;
@@ -1281,7 +1288,7 @@
             }
 
             p {
-                margin-bottom:2vh;
+                margin-bottom:6vh;
             }
             a:hover {
                 color: $darkaccent-color;
@@ -1760,6 +1767,7 @@
                     display:flex;
                     flex-direction:row;
                     height:100%;
+                    margin-bottom:$desktop-top-pad;
                     .signal {
                         width:70%;
                         height:100%;
@@ -1776,7 +1784,7 @@
                         .signal-desc {
                             width:100%;
                             height:100%;
-                            background-color:rgba(189, 32, 37,0.6);
+                            background-color:rgba(189, 32, 37,0.8);
                             color:$offwhite;
                             font-size:$desktop-small-size;
                             position:absolute;
