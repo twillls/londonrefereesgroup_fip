@@ -39,9 +39,6 @@ export default {
             };
     },
 
-    /**** TO-DO ****/
-    /* probably fix bottom padding on left side */
-
     template: 
     `  <div id="edu">
         <div class="edu-container">

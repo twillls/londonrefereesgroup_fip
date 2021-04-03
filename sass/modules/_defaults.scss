@@ -16,6 +16,20 @@ body {
     cursor:auto;
   }
 
+  ::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color:$accent-color;        /* color of the tracking area */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: $darkaccent-color;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border:6px solid rgba(0, 0, 0, 0);
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: $main-font;
     text-decoration:none;
